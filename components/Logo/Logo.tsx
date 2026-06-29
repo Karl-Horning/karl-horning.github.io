@@ -1,4 +1,4 @@
-import styles from "@/components/Logo.module.css";
+import styles from "@/components/Logo/Logo.module.css";
 import Link from "next/link";
 
 /**

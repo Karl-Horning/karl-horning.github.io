@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/components/About.module.css";
+import styles from "@/components/About/About.module.css";
 
 /**
  * About section summarising the site owner's background and experience.

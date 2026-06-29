@@ -1,4 +1,4 @@
-import styles from "@/components/Footer.module.css";
+import styles from "@/components/Footer/Footer.module.css";
 import { CODEPEN_URL, GITHUB_URL, LINKEDIN_URL, RSS_FEED_URL } from "@/lib/constants/links";
 import { NAV_LINKS } from "@/lib/constants/nav";
 import Link from "next/link";

@@ -4,8 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Logo from "@/components/Logo";
-import styles from "@/components/Nav.module.css";
+import Logo from "@/components/Logo/Logo";
+import styles from "@/components/Nav/Nav.module.css";
 import { NAV_LINKS } from "@/lib/constants/nav";
 
 /**

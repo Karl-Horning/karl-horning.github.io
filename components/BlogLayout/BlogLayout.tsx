@@ -1,4 +1,4 @@
-import styles from "@/components/BlogLayout.module.css";
+import styles from "@/components/BlogLayout/BlogLayout.module.css";
 import { POSTS, type PostMeta } from "@/lib/posts";
 import { LINKEDIN_URL } from "@/lib/constants/links";
 import Link from "next/link";

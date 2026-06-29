@@ -1,4 +1,4 @@
-import styles from "@/components/CtaStrip.module.css";
+import styles from "@/components/CtaStrip/CtaStrip.module.css";
 import { LINKEDIN_URL } from "@/lib/constants/links";
 import { FiArrowUpRight } from "react-icons/fi";
 

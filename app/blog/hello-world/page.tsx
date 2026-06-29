@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { meta } from "./meta";
-import BlogLayout from "@/components/BlogLayout";
+import BlogLayout from "@/components/BlogLayout/BlogLayout";
 
 export const metadata: Metadata = {
     title: meta.title,

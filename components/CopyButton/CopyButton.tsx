@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "@/components/CopyButton.module.css";
+import styles from "@/components/CopyButton/CopyButton.module.css";
 import { useState } from "react";
 
 /** Props for {@link CopyButton}. */
