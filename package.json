@@ -9,7 +9,7 @@
     "build:rss": "tsx scripts/build-rss-from-posts.ts",
     "prebuild": "npm run generate:posts && npm run build:posts && npm run build:rss",
     "build": "next build",
-    "start": "next start",
+    "start": "npx serve@latest out",
     "lint": "eslint",
     "test": "playwright test",
     "test:ui": "playwright test --ui",

@@ -6,23 +6,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import styles from "@/components/Nav.module.css";
-
-/**
- * A single navigation link entry.
- */
-interface NavLink {
-    /** URL the link points to (absolute path or hash anchor). */
-    href: string;
-    /** Visible label rendered inside the anchor. */
-    label: string;
-}
-
-/** Links rendered in both the desktop and mobile navigation menus. */
-const NAV_LINKS: NavLink[] = [
-    { href: "/#projects", label: "Projects" },
-    { href: "/blog", label: "Blog" },
-    { href: "/contact", label: "Contact" },
-];
+import { NAV_LINKS } from "@/lib/constants/nav";
 
 /**
  * Site-wide navigation bar with a responsive mobile menu.
@@ -40,18 +24,27 @@ export default function Nav() {
 
     const [isOpen, setIsOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
+    const [scrolledFromTop, setScrolledFromTop] = useState(false);
     const [scrolledPastHero, setScrolledPastHero] = useState(false);
 
-    // Nav chrome is fully revealed when not on the homepage, or once the
-    // hero sentinel has scrolled out of view.
-    const navRevealed = !isHomepage || scrolledPastHero;
+    // Background appears as soon as any scrolling occurs (or off-homepage).
+    const navBackgroundVisible = !isHomepage || scrolledFromTop || isOpen;
 
-    // Logo is visible when the nav is revealed or the mobile menu is open.
-    const logoVisible = navRevealed || isOpen;
+    // Logo only appears once the hero has fully scrolled out of view.
+    const logoVisible = !isHomepage || scrolledPastHero || isOpen;
 
     // Portal requires document.body — only render after hydration
     // eslint-disable-next-line react-hooks/set-state-in-effect
     useEffect(() => { setMounted(true); }, []);
+
+    useEffect(() => {
+        if (!isHomepage) return;
+        function onScroll() {
+            setScrolledFromTop(window.scrollY > 0);
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => window.removeEventListener("scroll", onScroll);
+    }, [isHomepage]);
 
     useEffect(() => {
         if (!isHomepage) return;
@@ -135,7 +128,7 @@ export default function Nav() {
     return (
         <header>
             <nav
-                className={`${styles.nav} ${!navRevealed && !isOpen ? styles.navTransparent : ""}`}
+                className={`${styles.nav} ${!navBackgroundVisible ? styles.navTransparent : ""}`}
                 aria-label="Main navigation"
             >
                 <div className={styles.navBar}>
