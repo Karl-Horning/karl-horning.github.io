@@ -1,5 +1,6 @@
 import styles from "@/components/Footer.module.css";
 import { CODEPEN_URL, GITHUB_URL, LINKEDIN_URL, RSS_FEED_URL } from "@/lib/constants/links";
+import { NAV_LINKS } from "@/lib/constants/nav";
 import Link from "next/link";
 import { FaCodepen, FaGithub, FaLinkedin, FaRss } from "react-icons/fa";
 
@@ -23,18 +24,11 @@ export default function Footer() {
                     </div>
                     <nav aria-label="Footer navigation">
                         <ul className={styles.footer__nav} role="list">
-                            <li>
-                                <Link href="/#about">About</Link>
-                            </li>
-                            <li>
-                                <Link href="/#projects">Projects</Link>
-                            </li>
-                            <li>
-                                <Link href="/blog">Blog</Link>
-                            </li>
-                            <li>
-                                <Link href="/contact">Contact</Link>
-                            </li>
+                            {NAV_LINKS.map(({ href, label }) => (
+                                <li key={href}>
+                                    <Link href={href}>{label}</Link>
+                                </li>
+                            ))}
                         </ul>
                     </nav>
                 </div>
