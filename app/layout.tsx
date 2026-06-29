@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Barlow_Condensed, Rubik_Glitch } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
+import Nav from "@/components/Nav/Nav";
+import Footer from "@/components/Footer/Footer";
 import {
     AUTHOR_NAME,
     AUTHOR_URL,

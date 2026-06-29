@@ -1,4 +1,4 @@
-import styles from "@/components/Projects.module.css";
+import styles from "@/components/Projects/Projects.module.css";
 import { PROJECTS } from "@/lib/projects";
 import { FiArrowRight } from "react-icons/fi";
 import Link from "next/link";

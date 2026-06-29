@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { meta } from "./meta";
-import ProjectLayout from "@/components/ProjectLayout";
+import ProjectLayout from "@/components/ProjectLayout/ProjectLayout";
 
 export const metadata: Metadata = {
     title: meta.title,

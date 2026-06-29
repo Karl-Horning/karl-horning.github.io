@@ -1,4 +1,4 @@
-import styles from "@/components/ProjectLayout.module.css";
+import styles from "@/components/ProjectLayout/ProjectLayout.module.css";
 import { PROJECTS, type ProjectMeta } from "@/lib/projects";
 import Link from "next/link";
 import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from "react-icons/fi";

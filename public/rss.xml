@@ -10,7 +10,7 @@
     <description>Notes on web development, accessibility, and learning tech</description>
     <language>en-GB</language>
     <generator>build-rss-from-posts.ts</generator>
-    <lastBuildDate>Sat, 25 Apr 2026 15:43:49 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 17:37:22 +0000</lastBuildDate>
     <atom:link href="https://www.karlhorning.dev/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Testing My Portfolio for Accessibility: What axe-core Found (and What It Didn&apos;t)</title>

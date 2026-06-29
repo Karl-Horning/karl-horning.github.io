@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { meta } from "./meta";
-import BlogLayout from "@/components/BlogLayout";
-import CodeBlock from "@/components/CodeBlock";
+import BlogLayout from "@/components/BlogLayout/BlogLayout";
+import CodeBlock from "@/components/CodeBlock/CodeBlock";
 import { jwtScript } from "./examples";
 
 export const metadata: Metadata = {

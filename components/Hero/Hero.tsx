@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "@/components/Hero.module.css";
+import styles from "@/components/Hero/Hero.module.css";
 import { LINKEDIN_URL } from "@/lib/constants/links";
 import { FiArrowUpRight } from "react-icons/fi";
 

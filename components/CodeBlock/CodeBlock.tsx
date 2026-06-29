@@ -1,6 +1,6 @@
-import styles from "@/components/CodeBlock.module.css";
+import styles from "@/components/CodeBlock/CodeBlock.module.css";
 import { codeToHtml } from "shiki";
-import CopyButton from "./CopyButton";
+import CopyButton from "@/components/CopyButton/CopyButton";
 
 /** Props for {@link CodeBlock}. */
 interface CodeBlockProps {
