@@ -17,9 +17,9 @@ export default function Page() {
         <BlogLayout meta={meta}>
             <p>
                 A reference list of web accessibility tools, guidelines, and
-                articles. Starred items (⭐️) are good starting points if
-                you&apos;re new to accessibility or just want to focus on the
-                essentials.
+                articles. Items marked <strong>Recommended</strong> are good
+                starting points if you&apos;re new to accessibility or just
+                want to focus on the essentials.
             </p>
 
             <h2>Checklist</h2>
@@ -36,7 +36,7 @@ export default function Page() {
             </figure>
             <ul>
                 <li>
-                    ⭐️{" "}
+                    <strong>Recommended:</strong>{" "}
                     <a
                         href="https://www.a11yproject.com/checklist/"
                         target="_blank"
@@ -65,7 +65,7 @@ export default function Page() {
             </figure>
             <ul>
                 <li>
-                    ⭐️{" "}
+                    <strong>Recommended:</strong>{" "}
                     <a
                         href="https://www.a11yproject.com/"
                         target="_blank"
@@ -123,7 +123,7 @@ export default function Page() {
             </figure>
             <ul>
                 <li>
-                    ⭐️{" "}
+                    <strong>Recommended:</strong>{" "}
                     <a
                         href="https://developer.mozilla.org/en-US/docs/Web/Accessibility"
                         target="_blank"
@@ -193,7 +193,7 @@ export default function Page() {
             </figure>
             <ul>
                 <li>
-                    ⭐️{" "}
+                    <strong>Recommended:</strong>{" "}
                     <a
                         href="https://webaim.org/techniques/keyboard/"
                         target="_blank"
@@ -252,7 +252,7 @@ export default function Page() {
                     issues.
                 </li>
                 <li>
-                    ⭐️{" "}
+                    <strong>Recommended:</strong>{" "}
                     <a
                         href="https://www.ssa.gov/accessibility/testmethod.html"
                         target="_blank"
@@ -309,7 +309,7 @@ export default function Page() {
             </figure>
             <ul>
                 <li>
-                    ⭐️{" "}
+                    <strong>Recommended:</strong>{" "}
                     <a
                         href="https://developers.google.com/web/tools/lighthouse/"
                         target="_blank"
@@ -346,7 +346,7 @@ export default function Page() {
             </figure>
             <ul>
                 <li>
-                    ⭐️{" "}
+                    <strong>Recommended:</strong>{" "}
                     <a
                         href="https://accessibilityinsights.io/"
                         target="_blank"
@@ -413,7 +413,7 @@ export default function Page() {
             </figure>
             <ul>
                 <li>
-                    ⭐️{" "}
+                    <strong>Recommended:</strong>{" "}
                     <a
                         href="https://webaim.org/resources/contrastchecker/"
                         target="_blank"
@@ -450,7 +450,7 @@ export default function Page() {
             </figure>
             <ul>
                 <li>
-                    ⭐️{" "}
+                    <strong>Recommended:</strong>{" "}
                     <a
                         href="https://wave.webaim.org/"
                         target="_blank"

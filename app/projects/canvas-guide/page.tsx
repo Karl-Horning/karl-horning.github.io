@@ -16,9 +16,9 @@ export default function Page() {
     return (
         <ProjectLayout meta={meta}>
             <p>
-                While leading technical evaluations for enterprise LMS
-                infrastructure at Imperial College London, Canvas was selected
-                as the platform. Looking at how other institutions and resources
+                While leading technical evaluations for enterprise Learning
+                Management System (LMS) infrastructure at Imperial College
+                London, Canvas was selected as the platform. Looking at how other institutions and resources
                 like Medium approached Canvas styling, I noticed the same
                 problems recurring: missing semantic tags, poor colour contrast,
                 overuse of legacy elements that could break at any point, and

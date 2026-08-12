@@ -45,7 +45,8 @@ export default function About() {
                                 King&apos;s College London
                             </strong>
                             . My background includes leading technical
-                            evaluations for enterprise LMS infrastructure at{" "}
+                            evaluations for enterprise Learning Management
+                            System (LMS) infrastructure at{" "}
                             <strong>Imperial College London</strong>, and three
                             years as a Backend Engineer at{" "}
                             <strong>Learnlight</strong>, where I built the
