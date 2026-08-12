@@ -21,6 +21,10 @@ export const OLD_API_POC_URL =
 export const RATE_LIMIT_POC_URL =
     "https://github.com/karl-horning/graphql-rate-limit-demo";
 
+/** Repo: GraphQL N+1 / DataLoader Demo PoC */
+export const NPLUSONE_POC_URL =
+    "https://github.com/Karl-Horning/graphql-nplusone-demo";
+
 /** Repo: Color Contrast Checker */
 export const CCC_REPO_URL =
     "https://github.com/karl-horning/color-contrast-checker-pwa";

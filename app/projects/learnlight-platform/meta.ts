@@ -1,4 +1,8 @@
-import { OLD_API_POC_URL, RATE_LIMIT_POC_URL } from "@/lib/constants/links";
+import {
+    NPLUSONE_POC_URL,
+    OLD_API_POC_URL,
+    RATE_LIMIT_POC_URL,
+} from "@/lib/constants/links";
 
 export const meta = {
     title: "Learnlight Platform",
@@ -32,5 +36,6 @@ export const meta = {
     links: [
         { label: "Oxford Dictionaries API PoC", href: OLD_API_POC_URL },
         { label: "GraphQL Rate Limit PoC", href: RATE_LIMIT_POC_URL },
+        { label: "GraphQL N+1 / DataLoader PoC", href: NPLUSONE_POC_URL },
     ],
 };
