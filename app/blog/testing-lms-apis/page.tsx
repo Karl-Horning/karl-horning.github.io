@@ -18,7 +18,8 @@ export default function Page() {
     return (
         <BlogLayout meta={meta}>
             <p>
-                As part of an LMS evaluation at a large research university, I
+                As part of a Learning Management System (LMS) evaluation at a
+                large research university, I
                 needed to build a Postman testing framework that would let the
                 whole team validate API behaviour across three platforms:
                 Blackboard, Canvas, and Brightspace. The constraint was that any
@@ -73,17 +74,16 @@ export default function Page() {
                 validate endpoint structure automatically.
             </p>
             <p>
-                One thing worth noting if you test Canvas locally using the{" "}
+                If you test Canvas locally using the{" "}
                 <a href="https://github.com/instructure/canvas-lms">
                     open-source version
                 </a>
-                : once you authenticate through the browser UI, API requests
+                , once you authenticate through the browser UI, API requests
                 appear to go through without a Bearer token. This seems to be
                 the session cookie carrying the authentication, which the API
                 accepts alongside OAuth2. It didn&apos;t affect the evaluation
-                testing itself, but it&apos;s worth being aware of if
-                you&apos;re running a local instance — it can mask auth issues
-                that would only surface in a real OAuth2 flow.
+                testing itself, but running a local instance can mask auth
+                issues that would only surface in a real OAuth2 flow.
             </p>
 
             <h2>Brightspace: the documentation problem</h2>
@@ -129,10 +129,10 @@ export default function Page() {
             </p>
             <p>
                 The contrast between the three platforms is a reasonable proxy
-                for API maturity. An OpenAPI spec isn&apos;t just convenient —
-                it changes what tooling is possible and how quickly a new
-                developer can become productive. That&apos;s worth considering
-                when evaluating any platform that exposes an API.
+                for API maturity. An OpenAPI spec changes what tooling is
+                possible and how quickly a new developer can become
+                productive — a real factor when evaluating any platform that
+                exposes an API.
             </p>
             <p>— Karl</p>
         </BlogLayout>
