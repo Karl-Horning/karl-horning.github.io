@@ -50,7 +50,7 @@ export default function Projects() {
                                     {project.keywords.map((kw) => (
                                         <li
                                             key={kw}
-                                            className={styles.tag}
+                                            className="tag"
                                         >
                                             {kw}
                                         </li>

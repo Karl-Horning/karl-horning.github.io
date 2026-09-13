@@ -97,7 +97,7 @@ export default function BlogList({ posts }: BlogListProps) {
                                     aria-label="Topics"
                                 >
                                     {post.topics.map((topic) => (
-                                        <li key={topic} className={styles.tag}>
+                                        <li key={topic} className="tag">
                                             {capitalizeFirst(topic)}
                                         </li>
                                     ))}

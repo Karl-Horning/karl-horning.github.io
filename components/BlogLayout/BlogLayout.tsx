@@ -1,11 +1,12 @@
 import styles from "@/components/BlogLayout/BlogLayout.module.css";
 import { POSTS, type PostMeta } from "@/lib/posts";
 import { LINKEDIN_URL } from "@/lib/constants/links";
-import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
-import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight } from "react-icons/fi";
 import Image from "next/image";
 import { MONTHS_FULL } from "@/lib/constants/dates";
+import { getPrevNext } from "@/lib/getPrevNext";
+import PrevNextNav from "@/components/PrevNextNav/PrevNextNav";
 
 interface Props {
     meta: PostMeta;
@@ -30,19 +31,13 @@ export default function BlogLayout({ meta, children }: Props) {
         .map((t) => t.charAt(0).toUpperCase() + t.slice(1))
         .join(" · ");
 
-    const published = POSTS.filter((p) => !p.draft);
-    const idx = published.findIndex((p) => p.slug === meta.slug);
-    const showNav = idx !== -1 && published.length > 1;
-    const prev = showNav
-        ? published[(idx - 1 + published.length) % published.length]
-        : null;
-    const next = showNav ? published[(idx + 1) % published.length] : null;
+    const { prev, next } = getPrevNext(POSTS, meta.slug);
 
     return (
         <>
-            <div className={styles.hero}>
-                <div className={styles.hero__inner}>
-                    <p className={`eyebrow ${styles.hero__eyebrow}`}>
+            <div className="page-header">
+                <div className="page-header__inner">
+                    <p className="eyebrow page-header__eyebrow">
                         {eyebrow}
                     </p>
                     <h1 className={`display ${styles.hero__title}`}>
@@ -68,7 +63,7 @@ export default function BlogLayout({ meta, children }: Props) {
                 <div className="wrap">
                     <div className={styles.body__grid}>
                         <article
-                            className={styles.article}
+                            className="prose"
                             aria-label="Post content"
                         >
                             {children}
@@ -118,43 +113,19 @@ export default function BlogLayout({ meta, children }: Props) {
                 <div className="wrap">
                     <ul className={styles.footer__tags} aria-label="Topics">
                         {meta.topics.map((topic) => (
-                            <li key={topic} className={styles.tag}>
+                            <li key={topic} className="tag">
                                 {topic}
                             </li>
                         ))}
                     </ul>
 
-                    {showNav && prev && next && (
-                        <nav aria-label="Post navigation">
-                            <div className={styles.nav__inner}>
-                                <Link
-                                    href={`/blog/${prev.slug}`}
-                                    className={styles.nav__link}
-                                    aria-label={`Previous post: ${prev.title}`}
-                                >
-                                    <span className={styles.nav__dir}>
-                                        <FiArrowLeft aria-hidden="true" />{" "}
-                                        Previous
-                                    </span>
-                                    <span className={styles.nav__name}>
-                                        {prev.title}
-                                    </span>
-                                </Link>
-                                <Link
-                                    href={`/blog/${next.slug}`}
-                                    className={`${styles.nav__link} ${styles.nav__link_next}`}
-                                    aria-label={`Next post: ${next.title}`}
-                                >
-                                    <span className={styles.nav__dir}>
-                                        Next <FiArrowRight aria-hidden="true" />
-                                    </span>
-                                    <span className={styles.nav__name}>
-                                        {next.title}
-                                    </span>
-                                </Link>
-                            </div>
-                        </nav>
-                    )}
+                    <PrevNextNav
+                        prev={prev}
+                        next={next}
+                        basePath="/blog"
+                        itemLabel="post"
+                        navLabel="Post navigation"
+                    />
                 </div>
             </div>
         </>
