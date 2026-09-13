@@ -64,9 +64,28 @@
     flex-wrap: wrap;
 }
 
+/* Tagline and legal link, stacked */
+.footer__legal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .footer__sub {
     font-size: 0.8125rem;
     color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__legal_link {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    align-self: flex-start;
+}
+
+.footer__legal_link:hover {
+    color: var(--pink-light);
 }
 
 /* Row of square icon links */

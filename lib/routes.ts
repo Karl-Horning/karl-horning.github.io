@@ -8,6 +8,7 @@ export const ROUTES = [
     "/",
     "/blog",
     "/contact",
+    "/accessibility-statement",
     "/projects/learnlight-platform",
     "/projects/karlhorning-dev",
     "/projects/transform-text",
