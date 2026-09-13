@@ -2,7 +2,7 @@ import styles from "@/components/BlogLayout/BlogLayout.module.css";
 import { POSTS, type PostMeta } from "@/lib/posts";
 import { LINKEDIN_URL } from "@/lib/constants/links";
 import { FaLinkedin } from "react-icons/fa";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight, FiCalendar, FiClock } from "react-icons/fi";
 import Image from "next/image";
 import { MONTHS_FULL } from "@/lib/constants/dates";
 import { getPrevNext } from "@/lib/getPrevNext";
@@ -44,13 +44,14 @@ export default function BlogLayout({ meta, children }: Props) {
                         {meta.title}
                     </h1>
                     <div className={styles.hero__meta}>
-                        <time
-                            className={styles.hero__date}
-                            dateTime={meta.date.split("T")[0]}
-                        >
-                            {formatDate(meta.date)}
-                        </time>
-                        <span className={styles.hero__time}>
+                        <span className={styles.hero__meta_item}>
+                            <FiCalendar aria-hidden="true" />
+                            <time dateTime={meta.date.split("T")[0]}>
+                                {formatDate(meta.date)}
+                            </time>
+                        </span>
+                        <span className={styles.hero__meta_item}>
+                            <FiClock aria-hidden="true" />
                             {meta.readingTime} min read
                         </span>
                     </div>
