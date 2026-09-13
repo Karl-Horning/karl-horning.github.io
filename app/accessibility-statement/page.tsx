@@ -15,7 +15,7 @@ export default function Page() {
             <div className="page-header">
                 <div className="page-header__inner">
                     <p className="eyebrow page-header__eyebrow">
-                        — Accessibility
+                        Policy
                     </p>
                     <h1 className="display page-header__title">
                         Accessibility

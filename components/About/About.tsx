@@ -13,9 +13,7 @@ export default function About() {
         <section className={styles.about} id="about" aria-labelledby="about-heading">
             <div className="wrap">
                 <div className="section__meta">
-                    <span className="eyebrow" aria-hidden="true">
-                        Background
-                    </span>
+                    <p className="eyebrow">Background</p>
                     <h2 className="section__title" id="about-heading">
                         About
                     </h2>

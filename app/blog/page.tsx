@@ -30,7 +30,7 @@ export default async function Page() {
         <>
             <div className="page-header">
                 <div className="page-header__inner">
-                    <p className="eyebrow page-header__eyebrow">— Writing</p>
+                    <p className="eyebrow page-header__eyebrow">Notes</p>
                     <h1 className="display page-header__title">Blog</h1>
                 </div>
             </div>
