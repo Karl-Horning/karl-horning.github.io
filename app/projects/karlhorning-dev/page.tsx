@@ -39,7 +39,7 @@ export default function Page() {
                 manual review had missed. Automated tools cover around 40% of
                 accessibility problems at best, so I also test with a screen
                 reader and keyboard navigation. The site needs to actually work
-                that way, not just pass an audit.
+                that way in practice.
             </p>
         </ProjectLayout>
     );

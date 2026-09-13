@@ -121,11 +121,9 @@ export default function Page() {
                 subsets of endpoints, the results aren&apos;t comparable.
             </p>
             <p>
-                Designing for any developer — rather than just the analysts who
-                already knew these platforms — also meant the framework would
-                survive staff changes. A new hire joining mid-evaluation could
-                get set up without needing a platform-specific walkthrough
-                first.
+                This also meant the framework would survive staff changes. A
+                new hire joining mid-evaluation could get set up without
+                needing a platform-specific walkthrough first.
             </p>
             <p>
                 The contrast between the three platforms is a reasonable proxy

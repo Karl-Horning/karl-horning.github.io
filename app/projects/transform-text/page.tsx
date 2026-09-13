@@ -35,7 +35,7 @@ export default function Page() {
                 used most: formatting strings for file names, function names,
                 API payloads, and JSON bodies. The logic was written, tested,
                 and working. The missing piece was surface area — it needed to
-                be available everywhere, not just in a browser tab.
+                be available everywhere.
             </p>
             <p>
                 This project was also my first deliberate experiment using
