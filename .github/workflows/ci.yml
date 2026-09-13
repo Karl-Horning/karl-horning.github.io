@@ -17,6 +17,10 @@ jobs:
           node-version: "20"
           cache: "npm"
 
+      # prose-lint is a private repo; this lets npm ci authenticate when fetching it.
+      - name: Configure access to private dependencies
+        run: git config --global url."https://${{ secrets.PROSE_LINT_PAT }}@github.com/".insteadOf "https://github.com/"
+
       - name: Install dependencies
         run: npm ci
 
