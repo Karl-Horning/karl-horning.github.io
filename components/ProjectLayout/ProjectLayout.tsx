@@ -2,6 +2,7 @@ import styles from "@/components/ProjectLayout/ProjectLayout.module.css";
 import { PROJECTS, type ProjectMeta } from "@/lib/projects";
 import Link from "next/link";
 import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+import { MONTHS_SHORT } from "@/lib/constants/dates";
 
 interface Props {
     meta: ProjectMeta;
@@ -11,21 +12,7 @@ interface Props {
 function formatDate(raw: string): string {
     if (raw === "present") return "Present";
     const [mm, yyyy] = raw.split("-");
-    const months = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-    ];
-    return `${months[parseInt(mm, 10) - 1]} ${yyyy}`;
+    return `${MONTHS_SHORT[parseInt(mm, 10) - 1]} ${yyyy}`;
 }
 
 /**
