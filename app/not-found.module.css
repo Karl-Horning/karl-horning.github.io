@@ -1,13 +1,3 @@
-/* ── Eyebrow label above the 404 number ── */
-.error__eyebrow {
-    font-size: 0.8125rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--pink-text);
-    margin-bottom: 1.25rem;
-}
-
 /* Large glitch-animated display number */
 .error__code {
     font-family: var(--font-barlow-condensed);

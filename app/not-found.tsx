@@ -18,7 +18,6 @@ export default function NotFound() {
     return (
         <section className="full-page" aria-labelledby="error-heading">
             <div className="page-inner">
-                <p className={styles.error__eyebrow}>Error</p>
                 <div
                     className={styles.error__code}
                     aria-hidden="true"
