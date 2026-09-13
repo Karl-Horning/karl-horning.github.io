@@ -7,7 +7,7 @@ import BlogList from "./BlogList";
 export const metadata: Metadata = {
     title: "Blog",
     description:
-        "Notes on web development, accessibility, and lessons from real development work.",
+        "Notes on web development, accessibility, and lessons from development work.",
 };
 
 /**

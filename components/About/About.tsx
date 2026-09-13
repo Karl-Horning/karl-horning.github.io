@@ -35,7 +35,7 @@ export default function About() {
                             Before writing code, I spent six years teaching
                             online — over <strong>10,000 hours</strong> of it. I
                             watched slow APIs, broken accessibility, and fragile
-                            UX get in the way of real people trying to learn.
+                            UX get in the way of people trying to learn.
                             That experience is still the lens I build through.
                         </p>
                         <p className={styles.about__text}>

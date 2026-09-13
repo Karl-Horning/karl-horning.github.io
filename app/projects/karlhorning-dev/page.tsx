@@ -19,7 +19,7 @@ export default function Page() {
                 This is the fourth version of karlhorning.dev. Previous
                 versions split the blog and portfolio across two separate
                 repositories — one in Next.js, one in Eleventy — and keeping
-                them in sync was a real overhead. Every blog post had to be
+                them in sync was overhead. Every blog post had to be
                 reflected in both places, and context-switching between React
                 and Eleventy&apos;s template language to maintain consistent
                 designs cost around 2–3 hours a month. Moving everything into a

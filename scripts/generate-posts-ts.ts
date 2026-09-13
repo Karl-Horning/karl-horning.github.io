@@ -12,8 +12,8 @@ const OUTPUT = path.join(ROOT, "lib", "posts.ts");
 /**
  * Converts a kebab-case slug into a camelCase identifier.
  *
- * @param slug - Kebab-case string (e.g. `"hello-world"`).
- * @returns camelCase identifier (e.g. `"helloWorld"`).
+ * @param slug - Kebab-case string (for example, `"hello-world"`).
+ * @returns camelCase identifier (for example, `"helloWorld"`).
  */
 function toCamelCase(slug: string): string {
     return slug

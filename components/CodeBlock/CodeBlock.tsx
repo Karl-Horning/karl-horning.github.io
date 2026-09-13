@@ -6,7 +6,7 @@ import CopyButton from "@/components/CopyButton/CopyButton";
 interface CodeBlockProps {
     /** The raw code string to display. Newlines and indentation are preserved. */
     children: string;
-    /** Shiki language identifier (e.g. `"javascript"`, `"bash"`, `"json"`). */
+    /** Shiki language identifier (for example, `"javascript"`, `"bash"`, `"json"`). */
     lang?: string;
 }
 

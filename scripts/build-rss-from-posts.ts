@@ -27,7 +27,7 @@ const FEED_SELF_URL = `${SITE_URL}/rss.xml`;
 /**
  * Zod schema for a single blog post entry sourced from `/public/data/posts.json`.
  *
- * Fields are validated to ensure correct formatting (e.g. ISO date).
+ * Fields are validated to ensure correct formatting (for example, ISO date).
  */
 const DATE_ONLY_RE = /^\d{4}-\d{2}-\d{2}$/;
 const ISO_UTC_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/;
@@ -90,7 +90,7 @@ function xmlEscape(s: string): string {
  * Formats a `Date` as an RFC-822 string in UTC with a `+0000` offset.
  *
  * @param d - Date to format.
- * @returns RFC-822 formatted date string (e.g., `Mon, 01 Jan 2025 09:00:00 +0000`).
+ * @returns RFC-822 formatted date string (for example, `Mon, 01 Jan 2025 09:00:00 +0000`).
  */
 function toRfc822UTC(d: Date): string {
     const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
