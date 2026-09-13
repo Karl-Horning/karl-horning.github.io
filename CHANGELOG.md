@@ -22,11 +22,13 @@ Baseline for the current site — the third build of karlhorning.dev, rewritten 
 - Custom 404 page
 - Playwright end-to-end tests and Vitest unit tests
 - GitHub Actions workflow deploying to GitHub Pages on every push to `main`
+- A `prose-lint` check (`prose-lint.test.ts`) scanning blog content and code comments for banned words and phrases
 
 ### Changed
 
 - Components reorganised into per-component folders
 - Dependencies updated to their latest versions
+- Blog and project copy audited against the site's writing style guide — filler words and repeated points cut, and hand-wrapped code comments rejoined into single lines for the editor to soft-wrap
 
 ### Fixed
 
