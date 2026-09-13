@@ -68,8 +68,11 @@ const OUTPUT_FILE = path.join(OUTPUT_DIR, "posts.json");
  */
 async function importMeta(tsFilePath: string): Promise<PostItem> {
     const fileUrl = pathToFileURL(path.join(ROOT, tsFilePath)).href;
-    const mod = await import(fileUrl);
-    const raw = (mod as any).default ?? (mod as any).meta;
+    const mod = (await import(fileUrl)) as {
+        default?: unknown;
+        meta?: unknown;
+    };
+    const raw = mod.default ?? mod.meta;
     return BlogMetaSchema.parse(raw);
 }
 
