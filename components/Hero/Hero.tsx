@@ -17,7 +17,7 @@ export default function Hero() {
             <section className="full-page" aria-label="Introduction">
                 <div className="page-inner">
                     <p className={styles.hero__eyebrow}>
-                        — Full-stack developer
+                        Full-stack developer
                     </p>
                     <h1 className={styles.hero__name}>
                         <span className={styles.line1}>Karl</span>

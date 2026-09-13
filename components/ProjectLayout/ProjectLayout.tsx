@@ -46,7 +46,7 @@ export default function ProjectLayout({ meta, children }: Props) {
             <div className={styles.hero}>
                 <div className={styles.hero__inner}>
                     <p className={`eyebrow ${styles.hero__eyebrow}`}>
-                        — Project {String(meta.number).padStart(2, "0")}
+                        Project {String(meta.number).padStart(2, "0")}
                     </p>
                     <h1 className={`display ${styles.hero__title}`}>
                         {meta.title}

@@ -21,9 +21,7 @@ export default function Projects() {
         >
             <div className="wrap">
                 <div className="section__meta">
-                    <span className="eyebrow" aria-hidden="true">
-                        Selected work
-                    </span>
+                    <p className="eyebrow">Selected work</p>
                     <h2 className="section__title" id="proj-heading">
                         Projects
                     </h2>

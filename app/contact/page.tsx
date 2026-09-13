@@ -20,7 +20,7 @@ export default function Page() {
             <div className="page-header">
                 <div className="page-header__inner">
                     <p className="eyebrow page-header__eyebrow">
-                        — Get in touch
+                        Get in touch
                     </p>
                     <h1 className="display page-header__title">
                         Let&apos;s
