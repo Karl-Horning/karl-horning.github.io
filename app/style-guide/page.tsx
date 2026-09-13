@@ -126,23 +126,23 @@ export default function Page() {
                         </div>
                         <div className={styles.type_sample}>
                             <p className={styles.label}>
-                                Content link (.article a, .prose a, .content
-                                a — three separately-defined copies)
+                                .prose a — shared globally, used in blog
+                                posts and the accessibility statement.
+                                Project pages use their own separate .prose
+                                module class instead — it only needs to
+                                style paragraphs, links, and figures, so
+                                it stays simpler (see the note under
+                                Bullets).
                             </p>
-                            <p>
-                                <a
-                                    href="#"
-                                    style={{
-                                        color: "var(--pink-text)",
-                                        textDecoration: "underline",
-                                        textUnderlineOffset: "0.2em",
-                                    }}
-                                >
-                                    Pink, underlined link
-                                </a>{" "}
-                                — used in blog posts, project pages, and the
-                                accessibility statement.
-                            </p>
+                            <div className="prose" style={{ marginBottom: 0 }}>
+                                <p style={{ marginBottom: 0 }}>
+                                    A{" "}
+                                    <a href="#">
+                                        pink, underlined content link
+                                    </a>
+                                    .
+                                </p>
+                            </div>
                         </div>
                         <div
                             className={styles.type_sample}
@@ -198,64 +198,37 @@ export default function Page() {
                             className={styles.row}
                             style={{ listStyle: "none", padding: 0 }}
                         >
-                            <li
-                                style={{
-                                    fontSize: "0.6875rem",
-                                    fontWeight: 700,
-                                    letterSpacing: "0.07em",
-                                    textTransform: "uppercase",
-                                    padding: "0.2rem 0.55rem",
-                                    background: "var(--bg2)",
-                                    borderRadius: "2px",
-                                    color: "var(--muted)",
-                                }}
-                            >
-                                TypeScript
-                            </li>
+                            <li className="tag">TypeScript</li>
                         </ul>
                         <p className={styles.label}>
-                            .tag — identical, separately-defined copies in{" "}
-                            <code>Projects.module.css</code> and{" "}
-                            <code>BlogList.module.css</code>. Decorative
-                            only; not interactive.
+                            .tag — a shared global class (used to be four
+                            separately-defined copies across Projects,
+                            BlogList, ProjectLayout, and BlogLayout).
+                            Decorative only; not interactive.
                         </p>
                     </div>
 
                     <div className={styles.block}>
                         <h2 className="section__title">Bullets</h2>
-                        <div className={styles.row} style={{ alignItems: "flex-start" }}>
-                            <div style={{ flex: 1, minWidth: "240px" }}>
-                                <p className={styles.label}>
-                                    Broken — .article ul, .prose ul (no
-                                    list-style set, so Tailwind&apos;s reset
-                                    hides the bullets). Live on the
-                                    hello-world and
-                                    web-accessibility-resources-and-tools
-                                    posts.
-                                </p>
-                                <ul style={{ paddingLeft: "1.5rem" }}>
-                                    <li>First item</li>
-                                    <li>Second item</li>
-                                    <li>Third item</li>
-                                </ul>
-                            </div>
-                            <div style={{ flex: 1, minWidth: "240px" }}>
-                                <p className={styles.label}>
-                                    Fixed — .content ul
-                                    (accessibility-statement) sets
-                                    list-style: disc explicitly.
-                                </p>
-                                <ul
-                                    style={{
-                                        listStyle: "disc",
-                                        paddingLeft: "1.5rem",
-                                    }}
-                                >
-                                    <li>First item</li>
-                                    <li>Second item</li>
-                                    <li>Third item</li>
-                                </ul>
-                            </div>
+                        <p className={styles.label}>
+                            .prose ul, .prose ol — shared globally, and sets
+                            list-style: disc explicitly, since
+                            Tailwind&apos;s reset hides bullets by default.
+                            Used to be two separate copies (.article in
+                            BlogLayout, .content on this page) that each had
+                            to remember that fix independently — now
+                            there&apos;s one definition to get right.
+                            Project pages keep their own separate .prose
+                            module class, which only styles paragraphs,
+                            links, and figures — it has never needed a ul
+                            rule at all.
+                        </p>
+                        <div className="prose" style={{ marginBottom: 0 }}>
+                            <ul style={{ marginBottom: 0 }}>
+                                <li>First item</li>
+                                <li>Second item</li>
+                                <li>Third item</li>
+                            </ul>
                         </div>
                     </div>
 
