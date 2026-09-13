@@ -5,39 +5,10 @@ import { useState } from "react";
 import type { PostMeta } from "@/lib/posts";
 import styles from "./BlogList.module.css";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import { MONTHS_FULL, MONTHS_SHORT } from "@/lib/constants/dates";
 
 /** Number of posts shown per page. */
 const POSTS_PER_PAGE = 10;
-
-const MONTHS_SHORT = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-];
-
-const MONTHS_FULL = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-];
 
 /**
  * Formats an ISO date string as a short month + year label (for example, "Apr 2026").
@@ -126,7 +97,7 @@ export default function BlogList({ posts }: BlogListProps) {
                                     aria-label="Topics"
                                 >
                                     {post.topics.map((topic) => (
-                                        <li key={topic} className={styles.tag}>
+                                        <li key={topic} className="tag">
                                             {capitalizeFirst(topic)}
                                         </li>
                                     ))}

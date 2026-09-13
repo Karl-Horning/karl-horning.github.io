@@ -29,7 +29,7 @@ export default function Page() {
 
             <section className={styles.body}>
                 <div className="wrap">
-                    <div className={styles.content}>
+                    <div className="prose">
                         <h2>Scope</h2>
                         <p>
                             This statement covers karlhorning.dev, my

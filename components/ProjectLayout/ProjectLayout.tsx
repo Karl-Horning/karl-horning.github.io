@@ -1,7 +1,9 @@
 import styles from "@/components/ProjectLayout/ProjectLayout.module.css";
 import { PROJECTS, type ProjectMeta } from "@/lib/projects";
-import Link from "next/link";
-import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight } from "react-icons/fi";
+import { MONTHS_SHORT } from "@/lib/constants/dates";
+import { getPrevNext } from "@/lib/getPrevNext";
+import PrevNextNav from "@/components/PrevNextNav/PrevNextNav";
 
 interface Props {
     meta: ProjectMeta;
@@ -11,21 +13,7 @@ interface Props {
 function formatDate(raw: string): string {
     if (raw === "present") return "Present";
     const [mm, yyyy] = raw.split("-");
-    const months = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-    ];
-    return `${months[parseInt(mm, 10) - 1]} ${yyyy}`;
+    return `${MONTHS_SHORT[parseInt(mm, 10) - 1]} ${yyyy}`;
 }
 
 /**
@@ -36,16 +24,13 @@ function formatDate(raw: string): string {
  * @return The project page layout element.
  */
 export default function ProjectLayout({ meta, children }: Props) {
-    const published = PROJECTS.filter((p) => !p.draft);
-    const idx = published.findIndex((p) => p.slug === meta.slug);
-    const prev = published[(idx - 1 + published.length) % published.length];
-    const next = published[(idx + 1) % published.length];
+    const { prev, next } = getPrevNext(PROJECTS, meta.slug);
 
     return (
         <>
-            <div className={styles.hero}>
-                <div className={styles.hero__inner}>
-                    <p className={`eyebrow ${styles.hero__eyebrow}`}>
+            <div className="page-header">
+                <div className="page-header__inner">
+                    <p className="eyebrow page-header__eyebrow">
                         Project {String(meta.number).padStart(2, "0")}
                     </p>
                     <h1 className={`display ${styles.hero__title}`}>
@@ -153,7 +138,7 @@ export default function ProjectLayout({ meta, children }: Props) {
                                 <p className={styles.card__title}>Tech stack</p>
                                 <ul className={styles.tech} role="list">
                                     {meta.keywords.map((kw) => (
-                                        <li key={kw} className={styles.tag}>
+                                        <li key={kw} className="tag">
                                             {kw}
                                         </li>
                                     ))}
@@ -166,34 +151,13 @@ export default function ProjectLayout({ meta, children }: Props) {
 
             <div className={styles.nav}>
                 <div className="wrap">
-                    <nav aria-label="Project navigation">
-                        <div className={styles.nav__inner}>
-                            <Link
-                                href={`/projects/${prev.slug}`}
-                                className={styles.nav__link}
-                                aria-label={`Previous project: ${prev.title}`}
-                            >
-                                <span className={styles.nav__dir}>
-                                    <FiArrowLeft aria-hidden="true" /> Previous
-                                </span>
-                                <span className={styles.nav__name}>
-                                    {prev.title}
-                                </span>
-                            </Link>
-                            <Link
-                                href={`/projects/${next.slug}`}
-                                className={`${styles.nav__link} ${styles.nav__link_next}`}
-                                aria-label={`Next project: ${next.title}`}
-                            >
-                                <span className={styles.nav__dir}>
-                                    Next <FiArrowRight aria-hidden="true" />
-                                </span>
-                                <span className={styles.nav__name}>
-                                    {next.title}
-                                </span>
-                            </Link>
-                        </div>
-                    </nav>
+                    <PrevNextNav
+                        prev={prev}
+                        next={next}
+                        basePath="/projects"
+                        itemLabel="project"
+                        navLabel="Project navigation"
+                    />
                 </div>
             </div>
         </>

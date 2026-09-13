@@ -50,17 +50,6 @@
     list-style: none;
 }
 
-.tag {
-    font-size: 0.6875rem;
-    font-weight: 700;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    padding: 0.2rem 0.55rem;
-    background: var(--bg2);
-    border-radius: 2px;
-    color: var(--muted);
-}
-
 /* "View" link pinned to the top-right of each project row */
 .proj__cta {
     display: flex;
