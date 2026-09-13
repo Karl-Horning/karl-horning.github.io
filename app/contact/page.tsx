@@ -51,7 +51,7 @@ export default function Page() {
                                 </h2>
                                 <p className={styles.linkedin_card__text}>
                                     LinkedIn is the best place to reach me. I
-                                    can see whether you&apos;re a real person,
+                                    can see whether you&apos;re a person,
                                     which I appreciate — I get a lot of noise
                                     through other channels. I&apos;m usually
                                     responsive within a day or two.

@@ -17,8 +17,7 @@ const ISO_UTC_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/;
 /**
  * Zod schema for blog post metadata.
  *
- * This schema validates the `meta` export from each blog post directory,
- * ensuring the correct structure and types for JSON output.
+ * This schema validates the `meta` export from each blog post directory, ensuring the correct structure and types for JSON output.
  */
 const BlogMetaSchema = z.object({
     title: z.string(),

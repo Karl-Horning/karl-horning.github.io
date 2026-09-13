@@ -6,19 +6,16 @@ import CopyButton from "@/components/CopyButton/CopyButton";
 interface CodeBlockProps {
     /** The raw code string to display. Newlines and indentation are preserved. */
     children: string;
-    /** Shiki language identifier (e.g. `"javascript"`, `"bash"`, `"json"`). */
+    /** Shiki language identifier (for example, `"javascript"`, `"bash"`, `"json"`). */
     lang?: string;
 }
 
 /**
  * Displays a syntax-highlighted code block with a copy-to-clipboard button.
  *
- * Uses Shiki to render highlighted HTML server-side, so no highlighting
- * JavaScript is shipped to the client. The copy button is handled by the
- * separate {@link CopyButton} client component.
+ * Uses Shiki to render highlighted HTML server-side, so no highlighting JavaScript is shipped to the client. The copy button is handled by the separate {@link CopyButton} client component.
  *
- * Accepts a raw string (typically a template literal) as its only child so
- * that newlines and indentation are preserved exactly as written.
+ * Accepts a raw string (typically a template literal) as its only child so that newlines and indentation are preserved exactly as written.
  *
  * @example
  * ```tsx

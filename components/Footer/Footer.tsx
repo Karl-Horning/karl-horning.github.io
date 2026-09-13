@@ -7,8 +7,7 @@ import { FaCodepen, FaGithub, FaLinkedin, FaRss } from "react-icons/fa";
 /**
  * Site-wide footer with brand logo, navigation links, and social icons.
  *
- * The top row contains the logo wordmark and an inline nav; the bottom row
- * holds a tagline and icon links to GitHub, LinkedIn, and CodePen.
+ * The top row contains the logo wordmark and an inline nav; the bottom row holds a tagline and icon links to GitHub, LinkedIn, and CodePen.
  *
  * @return The footer element.
  */

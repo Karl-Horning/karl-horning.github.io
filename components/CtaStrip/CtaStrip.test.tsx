@@ -10,8 +10,7 @@ import CtaStrip from "./CtaStrip";
 describe("CtaStrip", () => {
     it("renders the section heading", () => {
         render(<CtaStrip />);
-        // The h2 text is split across two spans with no whitespace between them,
-        // so the accessible name is "Like whatyou see?" — match on the first word.
+        // The h2 text is split across two spans with no whitespace between them, so the accessible name is "Like whatyou see?" — match on the first word.
         expect(
             screen.getByRole("heading", { name: /like what/i })
         ).toBeInTheDocument();

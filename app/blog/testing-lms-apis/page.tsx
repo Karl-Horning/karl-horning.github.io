@@ -83,7 +83,7 @@ export default function Page() {
                 the session cookie carrying the authentication, which the API
                 accepts alongside OAuth2. It didn&apos;t affect the evaluation
                 testing itself, but running a local instance can mask auth
-                issues that would only surface in a real OAuth2 flow.
+                issues that would only surface in a production OAuth2 flow.
             </p>
 
             <h2>Brightspace: the documentation problem</h2>
@@ -121,17 +121,15 @@ export default function Page() {
                 subsets of endpoints, the results aren&apos;t comparable.
             </p>
             <p>
-                Designing for any developer — rather than just the analysts who
-                already knew these platforms — also meant the framework would
-                survive staff changes. A new hire joining mid-evaluation could
-                get set up without needing a platform-specific walkthrough
-                first.
+                This also meant the framework would survive staff changes. A
+                new hire joining mid-evaluation could get set up without
+                needing a platform-specific walkthrough first.
             </p>
             <p>
                 The contrast between the three platforms is a reasonable proxy
                 for API maturity. An OpenAPI spec changes what tooling is
                 possible and how quickly a new developer can become
-                productive — a real factor when evaluating any platform that
+                productive — a factor when evaluating any platform that
                 exposes an API.
             </p>
             <p>— Karl</p>

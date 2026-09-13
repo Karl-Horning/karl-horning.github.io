@@ -12,8 +12,8 @@ const OUTPUT = path.join(ROOT, "lib", "posts.ts");
 /**
  * Converts a kebab-case slug into a camelCase identifier.
  *
- * @param slug - Kebab-case string (e.g. `"hello-world"`).
- * @returns camelCase identifier (e.g. `"helloWorld"`).
+ * @param slug - Kebab-case string (for example, `"hello-world"`).
+ * @returns camelCase identifier (for example, `"helloWorld"`).
  */
 function toCamelCase(slug: string): string {
     return slug
@@ -25,8 +25,7 @@ function toCamelCase(slug: string): string {
 }
 
 /**
- * Returns the slug of every `app/blog/<slug>/meta.ts` that exists,
- * sorted alphabetically.
+ * Returns the slug of every `app/blog/<slug>/meta.ts` that exists, sorted alphabetically.
  *
  * @returns Sorted array of blog post slugs.
  */
@@ -92,8 +91,7 @@ ${items}
 }
 
 /**
- * Main entry point: scans the blog directory, generates `lib/posts.ts`,
- * and writes it to disk.
+ * Main entry point: scans the blog directory, generates `lib/posts.ts`, and writes it to disk.
  *
  * @async
  * @returns Resolves when the file has been written.

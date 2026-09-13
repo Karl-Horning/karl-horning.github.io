@@ -10,8 +10,7 @@ export const metadata: Metadata = {
 /**
  * Rendered by Next.js whenever a route cannot be matched.
  *
- * Displays an animated glitch "404" with a short explanation and two
- * recovery actions: return home or visit the blog.
+ * Displays an animated glitch "404" with a short explanation and two recovery actions: return home or visit the blog.
  *
  * @return The 404 page element.
  */

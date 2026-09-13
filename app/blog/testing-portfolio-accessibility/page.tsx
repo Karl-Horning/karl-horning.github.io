@@ -162,7 +162,7 @@ export default function Page() {
 
             <h2>A note on tools</h2>
             <p>
-                Automated tools like axe-core are genuinely useful — they catch
+                Automated tools like axe-core are useful — they catch
                 structural and attribute-level issues consistently and at scale.
                 But they&apos;re widely cited as finding around 30-40% of
                 accessibility issues. The rest requires manual testing: keyboard

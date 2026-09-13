@@ -35,20 +35,20 @@ export default function Page() {
                 used most: formatting strings for file names, function names,
                 API payloads, and JSON bodies. The logic was written, tested,
                 and working. The missing piece was surface area — it needed to
-                be available everywhere, not just in a browser tab.
+                be available everywhere.
             </p>
             <p>
                 This project was also my first deliberate experiment using
                 generative AI as a coding partner. I had seen a talk by
                 developers at Microsoft on integrating AI into their daily
-                workflow and wanted to test the same approach on a real, bounded
+                workflow and wanted to test the same approach on an existing, bounded
                 project. The scope made it a good candidate — the transformation
                 logic was already written, requirements were clear, and I could
                 review every output critically.
             </p>
             <p>
                 Before writing a line of extension code, I reviewed the existing
-                repo. The review surfaced real issues: a function named in
+                repo. The review surfaced issues: a function named in
                 PascalCase inconsistent with every other export, a circular test
                 where the expected value used the same logic as the function
                 under test, a non-deterministic test that could fail by chance,

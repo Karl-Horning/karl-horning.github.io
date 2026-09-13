@@ -6,8 +6,7 @@ import { z } from "zod";
 /**
  * Base site and feed configuration.
  *
- * Used to construct absolute URLs and channel metadata
- * for the generated RSS feed.
+ * Used to construct absolute URLs and channel metadata for the generated RSS feed.
  */
 const SITE_URL = "https://www.karlhorning.dev";
 const BLOG_BASE = `${SITE_URL}/blog`;
@@ -27,7 +26,7 @@ const FEED_SELF_URL = `${SITE_URL}/rss.xml`;
 /**
  * Zod schema for a single blog post entry sourced from `/public/data/posts.json`.
  *
- * Fields are validated to ensure correct formatting (e.g. ISO date).
+ * Fields are validated to ensure correct formatting (for example, ISO date).
  */
 const DATE_ONLY_RE = /^\d{4}-\d{2}-\d{2}$/;
 const ISO_UTC_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/;
@@ -90,7 +89,7 @@ function xmlEscape(s: string): string {
  * Formats a `Date` as an RFC-822 string in UTC with a `+0000` offset.
  *
  * @param d - Date to format.
- * @returns RFC-822 formatted date string (e.g., `Mon, 01 Jan 2025 09:00:00 +0000`).
+ * @returns RFC-822 formatted date string (for example, `Mon, 01 Jan 2025 09:00:00 +0000`).
  */
 function toRfc822UTC(d: Date): string {
     const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -135,8 +134,7 @@ function absoluteUrl(relativeOrAbsolute: string): string {
 /**
  * Renders a single `<item>` XML block for the RSS feed.
  *
- * Includes title, link, publication date, description with thumbnail,
- * categories (from topics), a `media:thumbnail`, and a permalink GUID.
+ * Includes title, link, publication date, description with thumbnail, categories (from topics), a `media:thumbnail`, and a permalink GUID.
  *
  * @param p - Validated post object.
  * @returns The `<item>` XML string.
@@ -189,8 +187,7 @@ function safeParseJson(text: string): unknown {
 }
 
 /**
- * Main entry point: reads posts JSON, validates items, renders RSS XML,
- * and writes the result to {@link FEED_PATH}.
+ * Main entry point: reads posts JSON, validates items, renders RSS XML, and writes the result to {@link FEED_PATH}.
  *
  * Steps:
  * 1. Read `/public/data/posts.json` and parse JSON safely.

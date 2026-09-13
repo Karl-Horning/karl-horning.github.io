@@ -1,9 +1,7 @@
 /**
  * @fileoverview Automated accessibility tests using axe-core.
  *
- * Scans every page for WCAG violations detectable by axe. Note that axe
- * catches roughly 30–40% of accessibility issues; these tests complement
- * but do not replace manual accessibility review.
+ * Scans every page for WCAG violations detectable by axe. Note that axe catches roughly 30–40% of accessibility issues; these tests complement but do not replace manual accessibility review.
  */
 
 import AxeBuilder from "@axe-core/playwright";

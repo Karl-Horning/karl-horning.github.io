@@ -40,7 +40,7 @@ const MONTHS_FULL = [
 ];
 
 /**
- * Formats an ISO date string as a short month + year label (e.g. "Apr 2026").
+ * Formats an ISO date string as a short month + year label (for example, "Apr 2026").
  *
  * @param iso - ISO 8601 date string.
  * @returns Formatted short date string.
@@ -52,7 +52,7 @@ function shortDate(iso: string): string {
 
 /**
  * Formats an ISO date string as a human-readable aria-label
- * (e.g. "Published April 2026").
+ * (for example, "Published April 2026").
  *
  * @param iso - ISO 8601 date string.
  * @returns Accessible date label string.

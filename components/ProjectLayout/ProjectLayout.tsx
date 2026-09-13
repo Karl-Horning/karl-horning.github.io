@@ -31,10 +31,7 @@ function formatDate(raw: string): string {
 /**
  * Shared layout for individual project pages.
  *
- * Renders the hero, rule, two-column body (prose + sidebar), and
- * prev/next navigation. Sidebar content (stats and tech stack) and the
- * links list are derived from the project's metadata. The prose body and
- * any inline images are passed as {@code children}.
+ * Renders the hero, rule, two-column body (prose + sidebar), and prev/next navigation. Sidebar content (stats and tech stack) and the links list are derived from the project's metadata. The prose body and any inline images are passed as {@code children}.
  *
  * @return The project page layout element.
  */

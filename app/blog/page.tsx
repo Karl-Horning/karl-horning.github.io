@@ -7,14 +7,13 @@ import BlogList from "./BlogList";
 export const metadata: Metadata = {
     title: "Blog",
     description:
-        "Notes on web development, accessibility, and lessons from real development work.",
+        "Notes on web development, accessibility, and lessons from development work.",
 };
 
 /**
  * Blog listing page.
  *
- * Reads published posts from the pre-generated JSON file and passes them to
- * the paginated {@link BlogList} component.
+ * Reads published posts from the pre-generated JSON file and passes them to the paginated {@link BlogList} component.
  *
  * @return The blog listing page element.
  */
