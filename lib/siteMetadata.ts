@@ -22,8 +22,7 @@ interface PageMeta {
 /**
  * Generates a Next.js {@link Metadata} object for a page.
  *
- * The OpenGraph image is derived from the page slug, matching the naming
- * convention of the files in `/public/og/`.
+ * The OpenGraph image is derived from the page slug, matching the naming convention of the files in `/public/og/`.
  *
  * @param meta - The page's meta object from its `meta.ts` file.
  * @returns A fully populated {@link Metadata} object for the page.
@@ -56,8 +55,7 @@ export function generatePageMetadata(meta: PageMeta): Metadata {
 }
 
 /**
- * Generates a Schema.org {@link https://schema.org/Article Article} JSON-LD
- * object for a page.
+ * Generates a Schema.org {@link https://schema.org/Article Article} JSON-LD object for a page.
  *
  * @param meta - The page's meta object from its `meta.ts` file.
  * @returns A JSON-LD data object ready to be serialised into a script tag.

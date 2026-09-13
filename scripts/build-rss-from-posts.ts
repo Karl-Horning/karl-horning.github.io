@@ -6,8 +6,7 @@ import { z } from "zod";
 /**
  * Base site and feed configuration.
  *
- * Used to construct absolute URLs and channel metadata
- * for the generated RSS feed.
+ * Used to construct absolute URLs and channel metadata for the generated RSS feed.
  */
 const SITE_URL = "https://www.karlhorning.dev";
 const BLOG_BASE = `${SITE_URL}/blog`;
@@ -135,8 +134,7 @@ function absoluteUrl(relativeOrAbsolute: string): string {
 /**
  * Renders a single `<item>` XML block for the RSS feed.
  *
- * Includes title, link, publication date, description with thumbnail,
- * categories (from topics), a `media:thumbnail`, and a permalink GUID.
+ * Includes title, link, publication date, description with thumbnail, categories (from topics), a `media:thumbnail`, and a permalink GUID.
  *
  * @param p - Validated post object.
  * @returns The `<item>` XML string.
@@ -189,8 +187,7 @@ function safeParseJson(text: string): unknown {
 }
 
 /**
- * Main entry point: reads posts JSON, validates items, renders RSS XML,
- * and writes the result to {@link FEED_PATH}.
+ * Main entry point: reads posts JSON, validates items, renders RSS XML, and writes the result to {@link FEED_PATH}.
  *
  * Steps:
  * 1. Read `/public/data/posts.json` and parse JSON safely.

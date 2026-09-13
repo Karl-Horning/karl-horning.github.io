@@ -6,10 +6,7 @@ import Link from "next/link";
 /**
  * Selected work section listing notable projects.
  *
- * Renders a numbered list of projects, each showing a title, description,
- * technology tags, and a link to the full project page. Linked from the
- * main navigation via the `#projects` anchor and labelled for screen
- * readers via `aria-labelledby`.
+ * Renders a numbered list of projects, each showing a title, description, technology tags, and a link to the full project page. Linked from the main navigation via the `#projects` anchor and labelled for screen readers via `aria-labelledby`.
  *
  * @return The projects section element.
  */

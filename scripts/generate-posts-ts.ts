@@ -25,8 +25,7 @@ function toCamelCase(slug: string): string {
 }
 
 /**
- * Returns the slug of every `app/blog/<slug>/meta.ts` that exists,
- * sorted alphabetically.
+ * Returns the slug of every `app/blog/<slug>/meta.ts` that exists, sorted alphabetically.
  *
  * @returns Sorted array of blog post slugs.
  */
@@ -92,8 +91,7 @@ ${items}
 }
 
 /**
- * Main entry point: scans the blog directory, generates `lib/posts.ts`,
- * and writes it to disk.
+ * Main entry point: scans the blog directory, generates `lib/posts.ts`, and writes it to disk.
  *
  * @async
  * @returns Resolves when the file has been written.

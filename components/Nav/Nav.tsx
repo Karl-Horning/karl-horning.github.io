@@ -11,10 +11,7 @@ import { NAV_LINKS } from "@/lib/constants/nav";
 /**
  * Site-wide navigation bar with a responsive mobile menu.
  *
- * Renders a fixed header containing the site {@link Logo}, desktop
- * navigation links, and a hamburger button that toggles a full-width
- * mobile drawer. The logo and nav chrome are hidden while the homepage
- * hero is visible and revealed once the hero scrolls out of view.
+ * Renders a fixed header containing the site {@link Logo}, desktop navigation links, and a hamburger button that toggles a full-width mobile drawer. The logo and nav chrome are hidden while the homepage hero is visible and revealed once the hero scrolls out of view.
  *
  * @return The primary site navigation element.
  */
@@ -33,7 +30,7 @@ export default function Nav() {
     // Logo only appears once the hero has fully scrolled out of view.
     const logoVisible = !isHomepage || scrolledPastHero || isOpen;
 
-    // Portal requires document.body — only render after hydration
+    // Portal requires document.body — only render after hydration.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     useEffect(() => { setMounted(true); }, []);
 
@@ -55,8 +52,7 @@ export default function Nav() {
                 if (entry.isIntersecting) {
                     setScrolledPastHero(false);
                 } else {
-                    // Only reveal when the element has scrolled past the top of the
-                    // effective root, not when it starts below the viewport on load.
+                    // Only reveal when the element has scrolled past the top of the effective root, not when it starts below the viewport on load.
                     setScrolledPastHero(
                         entry.boundingClientRect.top < (entry.rootBounds?.top ?? 0)
                     );

@@ -10,8 +10,7 @@ export const dynamic = "force-static";
 /**
  * Generates the site's XML sitemap for search engine crawlers.
  *
- * Combines the manually maintained {@link ROUTES} list with blog post
- * routes derived from the pre-generated posts JSON file.
+ * Combines the manually maintained {@link ROUTES} list with blog post routes derived from the pre-generated posts JSON file.
  *
  * @return Array of sitemap entries, one per route.
  */

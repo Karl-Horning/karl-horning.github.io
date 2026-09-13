@@ -4,9 +4,7 @@ import styles from "@/components/About/About.module.css";
 /**
  * About section summarising the site owner's background and experience.
  *
- * Renders a profile photo alongside two paragraphs of biographical text
- * and a location line. Linked from the main navigation via the `#about`
- * anchor and labelled for screen readers via `aria-labelledby`.
+ * Renders a profile photo alongside two paragraphs of biographical text and a location line. Linked from the main navigation via the `#about` anchor and labelled for screen readers via `aria-labelledby`.
  *
  * @return The about section element.
  */

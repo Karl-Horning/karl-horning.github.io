@@ -13,8 +13,7 @@ export const metadata: Metadata = {
 /**
  * Blog listing page.
  *
- * Reads published posts from the pre-generated JSON file and passes them to
- * the paginated {@link BlogList} component.
+ * Reads published posts from the pre-generated JSON file and passes them to the paginated {@link BlogList} component.
  *
  * @return The blog listing page element.
  */

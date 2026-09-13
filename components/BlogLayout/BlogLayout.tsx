@@ -33,9 +33,7 @@ function formatDate(iso: string): string {
 /**
  * Shared layout for individual blog post pages.
  *
- * Renders the post header, rule, two-column body (article + author card),
- * and footer with tags and prev/next navigation. Navigation and the topic
- * eyebrow are derived from the post's metadata.
+ * Renders the post header, rule, two-column body (article + author card), and footer with tags and prev/next navigation. Navigation and the topic eyebrow are derived from the post's metadata.
  *
  * @return The blog post layout element.
  */

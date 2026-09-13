@@ -5,8 +5,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 /**
  * Full-width call-to-action strip inviting visitors to get in touch.
  *
- * Displays a prominent heading, a short availability note, and two
- * action buttons: one linking to LinkedIn and one to the contact page.
+ * Displays a prominent heading, a short availability note, and two action buttons: one linking to LinkedIn and one to the contact page.
  *
  * @return The CTA strip section element.
  */

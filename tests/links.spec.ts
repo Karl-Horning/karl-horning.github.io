@@ -1,6 +1,5 @@
 /**
- * @fileoverview Verifies that all internal links across the site resolve
- * without returning a 404 or other error status.
+ * @fileoverview Verifies that all internal links across the site resolve without returning a 404 or other error status.
  */
 
 import { expect, test } from "@playwright/test";
