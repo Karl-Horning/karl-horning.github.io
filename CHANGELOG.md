@@ -10,7 +10,7 @@ Add new entries here as they're merged, then rename this section when the releas
 
 ## [3.0.0] - 2026-09-13
 
-Baseline for the current site — the third build of karlhorning.dev, rewritten on Next.js. Earlier versions weren't tagged, so this release gathers everything built so far rather than listing it commit by commit.
+Baseline for the current site — the third build of karlhorning.dev, rewritten on Next.js. Earlier versions weren't tagged, so this release gathers everything built so far.
 
 ### Added
 
