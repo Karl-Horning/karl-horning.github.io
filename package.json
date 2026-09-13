@@ -42,7 +42,7 @@
     "fast-glob": "^3.3.3",
     "jsdom": "^27.0.1",
     "linkinator": "^7.6.1",
-    "prose-lint": "github:Karl-Horning/prose-lint",
+    "prose-lint": "git+https://github.com/Karl-Horning/prose-lint.git",
     "tailwindcss": "^4",
     "tsconfig-paths": "^4.2.0",
     "tsx": "^4.21.0",

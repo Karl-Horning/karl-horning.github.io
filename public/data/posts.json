@@ -21,7 +21,7 @@
     },
     {
         "title": "Web Accessibility Resources and Tools: Guidelines, Checklists, and Testing Solutions",
-        "description": "A reference list of web accessibility tools, guidelines, and articles — with starred items for quick starting points.",
+        "description": "A reference list of web accessibility tools, guidelines, and articles — with recommended items for quick starting points.",
         "date": "2025-10-22T20:10:00Z",
         "readingTime": 7,
         "slug": "web-accessibility-resources-and-tools",
@@ -79,7 +79,7 @@
     },
     {
         "title": "Hello, World!",
-        "description": "An introduction to the blog and what it covers: accessibility, architecture, and lessons from real development work.",
+        "description": "An introduction to the blog and what it covers: accessibility, architecture, and lessons from development work.",
         "date": "2025-06-22T22:33:00Z",
         "readingTime": 2,
         "slug": "hello-world",
