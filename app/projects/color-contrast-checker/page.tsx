@@ -22,22 +22,22 @@ export default function Page() {
                 visually overwhelming — I wanted something simpler.
             </p>
             <p>
-                The tool checks text and background color combinations against
+                The tool checks text and background colour combinations against
                 WCAG AA and AAA requirements and gives a clear pass/fail result.
                 It works offline as an installed PWA, which is how I use it day
                 to day.
             </p>
             <p>
-                The main design challenge wasn&apos;t technical — it was laying out
-                the color inputs, results, and live preview so that everything
+                The main design challenge was laying out
+                the colour inputs, results, and live preview so that everything
                 remained readable and usable across screen sizes. I went through
                 a few iterations before landing on something I was happy with.
             </p>
             <p>
                 One deliberate decision: the dark mode toggle overrides your
                 system theme rather than following it. A contrast checker that
-                locks you into your system&apos;s background color can interfere with
-                the task — if you&apos;re checking colors for a dark interface, you
+                locks you into your system&apos;s background colour can interfere with
+                the task — if you&apos;re checking colours for a dark interface, you
                 want to see them on a dark background.
             </p>
             <p>
