@@ -34,10 +34,7 @@ export default function Hero() {
                             <p className={styles.hero__bio}>
                                 Web Developer at King&apos;s College London. I
                                 build things that work for everyone — fast,
-                                accessible, no loading screens. Previously a
-                                Full-Stack Engineer at Learnlight, scaling a
-                                GraphQL API for 700,000+ learners across 180
-                                countries.
+                                accessible, no loading screens.
                             </p>
                         </div>
                         <div className={styles.hero__actions}>
