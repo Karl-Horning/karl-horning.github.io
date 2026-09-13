@@ -18,8 +18,11 @@ jobs:
           cache: "npm"
 
       # prose-lint is a private repo; this lets npm ci authenticate when fetching it.
+      # npm tries the SSH form of github.com URLs regardless of what's in package.json, so both forms need rewriting to the token'd HTTPS URL.
       - name: Configure access to private dependencies
-        run: git config --global url."https://${{ secrets.PROSE_LINT_PAT }}@github.com/".insteadOf "https://github.com/"
+        run: |
+          git config --global url."https://${{ secrets.PROSE_LINT_PAT }}@github.com/".insteadOf "https://github.com/"
+          git config --global --add url."https://${{ secrets.PROSE_LINT_PAT }}@github.com/".insteadOf "ssh://git@github.com/"
 
       - name: Install dependencies
         run: npm ci
