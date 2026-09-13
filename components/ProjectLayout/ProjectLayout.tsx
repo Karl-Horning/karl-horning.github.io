@@ -1,6 +1,6 @@
 import styles from "@/components/ProjectLayout/ProjectLayout.module.css";
 import { PROJECTS, type ProjectMeta } from "@/lib/projects";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight, FiBriefcase, FiCalendar } from "react-icons/fi";
 import { MONTHS_SHORT } from "@/lib/constants/dates";
 import { getPrevNext } from "@/lib/getPrevNext";
 import PrevNextNav from "@/components/PrevNextNav/PrevNextNav";
@@ -37,8 +37,12 @@ export default function ProjectLayout({ meta, children }: Props) {
                         {meta.title}
                     </h1>
                     <div className={styles.hero__meta}>
-                        <span className={styles.hero__role}>{meta.role}</span>
-                        <span className={styles.hero__period}>
+                        <span className={styles.hero__meta_item}>
+                            <FiBriefcase aria-hidden="true" />
+                            {meta.role}
+                        </span>
+                        <span className={styles.hero__meta_item}>
+                            <FiCalendar aria-hidden="true" />
                             {formatDate(meta.dateFrom)} –{" "}
                             {formatDate(meta.dateTo)}
                         </span>

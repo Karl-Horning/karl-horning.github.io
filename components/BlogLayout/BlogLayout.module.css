@@ -12,17 +12,17 @@
     gap: 1rem;
 }
 
-.hero__date,
-.hero__time {
+.hero__meta_item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
     font-size: 0.875rem;
     font-weight: 600;
     color: var(--muted);
 }
 
-/* Dot separator before the reading time */
-.hero__time::before {
-    content: "·";
-    margin-right: 1rem;
+.hero__meta_item svg {
+    color: var(--pink-text);
 }
 
 /* ── Body ── */

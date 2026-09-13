@@ -11,17 +11,17 @@
     gap: 1rem;
 }
 
-.hero__role,
-.hero__period {
+.hero__meta_item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
     font-size: 0.875rem;
     font-weight: 600;
     color: var(--muted);
 }
 
-/* Dot separator before the date range */
-.hero__period::before {
-    content: "·";
-    margin-right: 1rem;
+.hero__meta_item svg {
+    color: var(--pink-text);
 }
 
 /* ── Body ── */
