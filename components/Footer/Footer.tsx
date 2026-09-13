@@ -32,9 +32,18 @@ export default function Footer() {
                     </nav>
                 </div>
                 <div className={styles.footer__bottom}>
-                    <p className={styles.footer__sub}>
-                        Built fast. Built accessible. No loading screens.
-                    </p>
+                    <div className={styles.footer__legal}>
+                        <p className={styles.footer__sub}>
+                            Built fast. Built accessible. No loading
+                            screens.
+                        </p>
+                        <Link
+                            href="/accessibility-statement"
+                            className={styles.footer__legal_link}
+                        >
+                            Accessibility statement
+                        </Link>
+                    </div>
                     <ul
                         className={styles.footer__social}
                         role="list"
