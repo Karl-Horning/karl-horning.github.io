@@ -10,7 +10,7 @@
     <description>Notes on web development, accessibility, and learning tech</description>
     <language>en-GB</language>
     <generator>build-rss-from-posts.ts</generator>
-    <lastBuildDate>Mon, 29 Jun 2026 17:37:22 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 21:37:45 +0000</lastBuildDate>
     <atom:link href="https://www.karlhorning.dev/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Testing My Portfolio for Accessibility: What axe-core Found (and What It Didn&apos;t)</title>
@@ -30,7 +30,7 @@
       <title>Web Accessibility Resources and Tools: Guidelines, Checklists, and Testing Solutions</title>
       <link>https://www.karlhorning.dev/blog/web-accessibility-resources-and-tools</link>
       <pubDate>Wed, 22 Oct 2025 20:10:00 +0000</pubDate>
-      <description><![CDATA[<img src="https://www.karlhorning.dev/img/blog/header-computer.png" alt="A collection of icons representing accessibility and web tools" /><br>A reference list of web accessibility tools, guidelines, and articles — with starred items for quick starting points.]]></description>
+      <description><![CDATA[<img src="https://www.karlhorning.dev/img/blog/header-computer.png" alt="A collection of icons representing accessibility and web tools" /><br>A reference list of web accessibility tools, guidelines, and articles — with recommended items for quick starting points.]]></description>
       <category>accessibility</category>
       <category>a11y</category>
       <category>web-development</category>
@@ -70,7 +70,7 @@
       <title>Hello, World!</title>
       <link>https://www.karlhorning.dev/blog/hello-world</link>
       <pubDate>Sun, 22 Jun 2025 22:33:00 +0000</pubDate>
-      <description><![CDATA[<img src="https://www.karlhorning.dev/img/blog/pexels-meruyert-gonullu-7317281.optimised.webp" alt="A neon sign saying &apos;hello&apos;" /><br>An introduction to the blog and what it covers: accessibility, architecture, and lessons from real development work.]]></description>
+      <description><![CDATA[<img src="https://www.karlhorning.dev/img/blog/pexels-meruyert-gonullu-7317281.optimised.webp" alt="A neon sign saying &apos;hello&apos;" /><br>An introduction to the blog and what it covers: accessibility, architecture, and lessons from development work.]]></description>
       <category>meta</category>
       <category>blog</category>
       <category>personal</category>
