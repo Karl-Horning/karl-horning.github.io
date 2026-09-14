@@ -16,8 +16,9 @@ export default function Page() {
     return (
         <ProjectLayout meta={meta}>
             <p>
-                This is the fourth version of karlhorning.dev. Previous
-                versions split the blog and portfolio across two separate
+                This is the fourth version of <code>karlhorning.dev</code>.
+                Previous versions split the blog and portfolio across two
+                separate
                 repositories — one in Next.js, one in Eleventy — and keeping
                 them in sync was overhead. Every blog post had to be
                 reflected in both places, and context-switching between React

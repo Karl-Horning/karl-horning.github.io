@@ -32,8 +32,9 @@ export default function Page() {
                     <div className="prose">
                         <h2>Scope</h2>
                         <p>
-                            This statement covers karlhorning.dev, my
-                            personal portfolio and blog. I want it to work
+                            This statement covers{" "}
+                            <code>karlhorning.dev</code>, my personal
+                            portfolio and blog. I want it to work
                             for everyone, including people using a screen
                             reader, keyboard-only navigation, or a
                             magnifier.
