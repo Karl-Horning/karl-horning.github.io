@@ -1,6 +1,6 @@
 import styles from "@/components/ProjectLayout/ProjectLayout.module.css";
 import { PROJECTS, type ProjectMeta } from "@/lib/projects";
-import { FiArrowUpRight, FiBriefcase, FiCalendar } from "react-icons/fi";
+import { FiBriefcase, FiCalendar, FiExternalLink } from "react-icons/fi";
 import { MONTHS_SHORT } from "@/lib/constants/dates";
 import { getPrevNext } from "@/lib/getPrevNext";
 import ContentLayout from "@/components/ContentLayout/ContentLayout";
@@ -63,7 +63,7 @@ export default function ProjectLayout({ meta, children }: Props) {
                                             className={styles.link__icon}
                                             aria-hidden="true"
                                         >
-                                            <FiArrowUpRight aria-hidden="true" />
+                                            <FiExternalLink aria-hidden="true" />
                                         </span>
                                         <p className={styles.link__text}>
                                             <a

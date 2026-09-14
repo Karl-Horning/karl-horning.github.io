@@ -130,12 +130,6 @@
     align-self: flex-start;
 }
 
-@media (max-width: 400px) {
-    .btn_linkedin__arrow {
-        display: none;
-    }
-}
-
 @media (max-width: 950px) {
     .btn_linkedin, .form__submit {
         width: 100%;

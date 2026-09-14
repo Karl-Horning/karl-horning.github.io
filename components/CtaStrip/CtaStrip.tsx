@@ -1,6 +1,7 @@
 import styles from "@/components/CtaStrip/CtaStrip.module.css";
 import { LINKEDIN_URL } from "@/lib/constants/links";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiSend } from "react-icons/fi";
+import { FaLinkedin } from "react-icons/fa";
 
 /**
  * Full-width call-to-action strip inviting visitors to get in touch.
@@ -27,11 +28,10 @@ export default function CtaStrip() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Connect on LinkedIn{" "}
-                        <FiArrowUpRight aria-hidden="true" />
+                        <FaLinkedin aria-hidden="true" /> Connect on LinkedIn
                     </a>
                     <a href="contact" className="btn btn--ghost">
-                        Send a message
+                        <FiSend aria-hidden="true" /> Send a message
                     </a>
                 </div>
             </div>
