@@ -69,7 +69,7 @@ export default function BlogList({ posts }: BlogListProps) {
     return (
         <section className={styles.section} aria-labelledby="posts-heading">
             <div className="wrap">
-                <h2 className={styles.sr_only} id="posts-heading">
+                <h2 className="sr-only" id="posts-heading">
                     All posts
                 </h2>
 
@@ -104,14 +104,10 @@ export default function BlogList({ posts }: BlogListProps) {
                                 </ul>
                             </div>
 
-                            <Link
-                                href={`/blog/${post.slug}`}
-                                className={styles.post__read}
-                                aria-label={`Read: ${post.title} — ${post.readingTime} min`}
-                            >
+                            <span className={styles.post__read}>
                                 <FiBookOpen aria-hidden="true" />{" "}
                                 {post.readingTime} min
-                            </Link>
+                            </span>
                         </li>
                     ))}
                 </ul>

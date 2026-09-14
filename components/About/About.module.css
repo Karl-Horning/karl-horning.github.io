@@ -45,10 +45,6 @@
 
 /* Location / availability line below the bio paragraphs */
 .about__location {
-    font-size: 0.875rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    color: var(--pink-text);
     margin-top: 0.5rem;
 }
 

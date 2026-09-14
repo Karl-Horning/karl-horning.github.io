@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { meta } from "./meta";
 import BlogLayout from "@/components/BlogLayout/BlogLayout";
+import ExternalLink from "@/components/ExternalLink/ExternalLink";
 
 export const metadata: Metadata = {
     title: meta.title,
@@ -37,13 +38,9 @@ export default function Page() {
             <ul>
                 <li>
                     <strong>Recommended:</strong>{" "}
-                    <a
-                        href="https://www.a11yproject.com/checklist/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://www.a11yproject.com/checklist/">
                         The Web Content Accessibility Guidelines (WCAG)
-                    </a>
+                    </ExternalLink>
                     : A detailed checklist based on WCAG 2.2, providing
                     guidelines for creating accessible web content.
                 </li>
@@ -66,44 +63,28 @@ export default function Page() {
             <ul>
                 <li>
                     <strong>Recommended:</strong>{" "}
-                    <a
-                        href="https://www.a11yproject.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://www.a11yproject.com/">
                         The A11Y Project
-                    </a>
+                    </ExternalLink>
                     : A community-driven resource that makes accessibility
                     easier to understand and apply.
                 </li>
                 <li>
-                    <a
-                        href="https://a11y.coffee/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://a11y.coffee/">
                         A11y Coffee
-                    </a>
+                    </ExternalLink>
                     : Practical tips and advice for web accessibility.
                 </li>
                 <li>
-                    <a
-                        href="https://inclusivedesignprinciples.info/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://inclusivedesignprinciples.info/">
                         Inclusive Design Principles
-                    </a>
+                    </ExternalLink>
                     : A concise set of principles for designing inclusively.
                 </li>
                 <li>
-                    <a
-                        href="https://accessibility.blog.gov.uk/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://accessibility.blog.gov.uk/">
                         The Accessibility Blog (GOV.UK)
-                    </a>
+                    </ExternalLink>
                     : Case studies and guidance from the UK Government Digital
                     Service.
                 </li>
@@ -124,56 +105,36 @@ export default function Page() {
             <ul>
                 <li>
                     <strong>Recommended:</strong>{" "}
-                    <a
-                        href="https://developer.mozilla.org/en-US/docs/Web/Accessibility"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">
                         MDN Accessibility
-                    </a>
+                    </ExternalLink>
                     : Mozilla&apos;s guide to web accessibility.
                 </li>
                 <li>
-                    <a
-                        href="https://www.w3.org/WAI/standards-guidelines/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://www.w3.org/WAI/standards-guidelines/">
                         W3C Accessibility Standards Overview
-                    </a>
+                    </ExternalLink>
                     : An overview of W3C standards including WCAG, ARIA, and
                     ATAG.
                 </li>
                 <li>
-                    <a
-                        href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html">
                         Understanding WCAG 2.0
-                    </a>
+                    </ExternalLink>
                     : The official documentation explaining each WCAG guideline
                     in detail.
                 </li>
                 <li>
-                    <a
-                        href="https://www.w3.org/WAI/tutorials/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://www.w3.org/WAI/tutorials/">
                         Web Accessibility Tutorials
-                    </a>
+                    </ExternalLink>
                     : Step-by-step tutorials from the Web Accessibility
                     Initiative (WAI).
                 </li>
                 <li>
-                    <a
-                        href="https://www.w3.org/TR/html-aria/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://www.w3.org/TR/html-aria/">
                         ARIA in HTML
-                    </a>
+                    </ExternalLink>
                     : The official W3C guide to using ARIA roles and labels
                     effectively.
                 </li>
@@ -194,34 +155,22 @@ export default function Page() {
             <ul>
                 <li>
                     <strong>Recommended:</strong>{" "}
-                    <a
-                        href="https://webaim.org/techniques/keyboard/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://webaim.org/techniques/keyboard/">
                         Keyboard Accessibility
-                    </a>
+                    </ExternalLink>
                     : A detailed walkthrough for making sites keyboard-friendly.
                 </li>
                 <li>
-                    <a
-                        href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard">
                         Keyboard (MDN)
-                    </a>
+                    </ExternalLink>
                     : Mozilla&apos;s reference for keyboard accessibility
                     standards.
                 </li>
                 <li>
-                    <a
-                        href="https://support.mozilla.org/en-US/kb/accessibility-features-firefox-make-firefox-and-we"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://support.mozilla.org/en-US/kb/accessibility-features-firefox-make-firefox-and-we">
                         Accessibility features in Firefox
-                    </a>
+                    </ExternalLink>
                     : How Firefox supports users who rely on accessibility
                     features.
                 </li>
@@ -230,59 +179,39 @@ export default function Page() {
             <h3>Articles and case studies</h3>
             <ul>
                 <li>
-                    <a
-                        href="https://www.w3.org/standards/webdesign/accessibility"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://www.w3.org/standards/webdesign/accessibility">
                         Accessibility
-                    </a>{" "}
+                    </ExternalLink>{" "}
                     (W3C): An overview of the standards that shape accessible
                     web design.
                 </li>
                 <li>
-                    <a
-                        href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">
                         Handling common accessibility problems
-                    </a>
+                    </ExternalLink>
                     : Mozilla&apos;s guidance on solving common accessibility
                     issues.
                 </li>
                 <li>
                     <strong>Recommended:</strong>{" "}
-                    <a
-                        href="https://www.ssa.gov/accessibility/testmethod.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://www.ssa.gov/accessibility/testmethod.html">
                         SSA 508 Test Method
-                    </a>
+                    </ExternalLink>
                     : The Social Security Administration&apos;s structured
                     approach to accessibility testing.
                 </li>
                 <li>
-                    <a
-                        href="https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/">
                         What we found when we tested tools on the world&apos;s
                         least-accessible webpage
-                    </a>
+                    </ExternalLink>
                     : GOV.UK&apos;s honest comparison of automated testing
                     tools.
                 </li>
                 <li>
-                    <a
-                        href="https://www.imperial.ac.uk/stories/dhm-accessibility-guide/#article"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://www.imperial.ac.uk/stories/dhm-accessibility-guide/#article">
                         This guide is unreadable
-                    </a>
+                    </ExternalLink>
                     : A useful example of what poor accessibility looks like in
                     practice.
                 </li>
@@ -310,24 +239,16 @@ export default function Page() {
             <ul>
                 <li>
                     <strong>Recommended:</strong>{" "}
-                    <a
-                        href="https://developers.google.com/web/tools/lighthouse/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://developers.google.com/web/tools/lighthouse/">
                         Lighthouse
-                    </a>
+                    </ExternalLink>
                     : Built into Chrome DevTools. Audits accessibility,
                     performance, SEO, and best practices.
                 </li>
                 <li>
-                    <a
-                        href="https://www.deque.com/axe/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://www.deque.com/axe/">
                         axe DevTools
-                    </a>
+                    </ExternalLink>
                     : One of the most widely used accessibility testing
                     libraries, available as a browser extension and via{" "}
                     <code>@axe-core/playwright</code> for automated testing.
@@ -347,53 +268,33 @@ export default function Page() {
             <ul>
                 <li>
                     <strong>Recommended:</strong>{" "}
-                    <a
-                        href="https://accessibilityinsights.io/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://accessibilityinsights.io/">
                         Accessibility Insights
-                    </a>
+                    </ExternalLink>
                     : Microsoft&apos;s extension for finding and fixing
                     accessibility issues, including a guided FastPass workflow.
                 </li>
                 <li>
                     ARIA DevTools{" "}
-                    <a
-                        href="https://addons.mozilla.org/en-US/firefox/addon/aria-devtools/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://addons.mozilla.org/en-US/firefox/addon/aria-devtools/">
                         (Firefox)
-                    </a>{" "}
+                    </ExternalLink>{" "}
                     /{" "}
-                    <a
-                        href="https://chromewebstore.google.com/detail/aria-devtools/dneemiigcbbgbdjlcdjjnianlikimpck"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://chromewebstore.google.com/detail/aria-devtools/dneemiigcbbgbdjlcdjjnianlikimpck">
                         (Chrome)
-                    </a>
+                    </ExternalLink>
                     : View missing ARIA labels, misused roles, and keyboard
                     issues.
                 </li>
                 <li>
                     WAVE Evaluation Tool{" "}
-                    <a
-                        href="https://addons.mozilla.org/en-US/firefox/addon/wave-accessibility-tool/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://addons.mozilla.org/en-US/firefox/addon/wave-accessibility-tool/">
                         (Firefox)
-                    </a>{" "}
+                    </ExternalLink>{" "}
                     /{" "}
-                    <a
-                        href="https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">
                         (Chrome)
-                    </a>
+                    </ExternalLink>
                     : WebAIM&apos;s browser extension for visual accessibility
                     checks.
                 </li>
@@ -414,24 +315,16 @@ export default function Page() {
             <ul>
                 <li>
                     <strong>Recommended:</strong>{" "}
-                    <a
-                        href="https://webaim.org/resources/contrastchecker/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://webaim.org/resources/contrastchecker/">
                         Contrast Checker
-                    </a>
+                    </ExternalLink>
                     : WebAIM&apos;s tool for checking text and background colour
                     contrast ratios against WCAG thresholds.
                 </li>
                 <li>
-                    <a
-                        href="https://color.a11y.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://color.a11y.com/">
                         Colour Contrast Accessibility Validator
-                    </a>
+                    </ExternalLink>
                     : Scans an entire page for contrast issues.
                 </li>
             </ul>
@@ -451,56 +344,36 @@ export default function Page() {
             <ul>
                 <li>
                     <strong>Recommended:</strong>{" "}
-                    <a
-                        href="https://wave.webaim.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://wave.webaim.org/">
                         WAVE
-                    </a>
+                    </ExternalLink>
                     : Overlays visual indicators on the page to show
                     accessibility issues in context.
                 </li>
                 <li>
-                    <a
-                        href="https://pa11y.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://pa11y.org/">
                         Pa11y
-                    </a>
+                    </ExternalLink>
                     : Command-line tool for automated accessibility testing.
                     Useful in CI pipelines.
                 </li>
                 <li>
-                    <a
-                        href="https://squizlabs.github.io/HTML_CodeSniffer/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://squizlabs.github.io/HTML_CodeSniffer/">
                         HTML_CodeSniffer
-                    </a>
+                    </ExternalLink>
                     : Detects code-level accessibility issues.
                 </li>
                 <li>
-                    <a
-                        href="https://jdan.github.io/tota11y/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://jdan.github.io/tota11y/">
                         tota11y
-                    </a>
+                    </ExternalLink>
                     : A JavaScript bookmarklet that visualises accessibility
                     errors directly on the page.
                 </li>
                 <li>
-                    <a
-                        href="https://asqatasun.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <ExternalLink href="https://asqatasun.org/">
                         Asqatasun
-                    </a>
+                    </ExternalLink>
                     : Open-source tool for automated accessibility auditing.
                 </li>
             </ul>

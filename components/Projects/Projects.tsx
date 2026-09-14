@@ -38,7 +38,9 @@ export default function Projects() {
                             </span>
                             <div>
                                 <h3 className={styles.proj__title}>
-                                    {project.title}
+                                    <Link href={`/projects/${project.slug}`}>
+                                        {project.title}
+                                    </Link>
                                 </h3>
                                 <p className={styles.proj__desc}>
                                     {project.description}
@@ -57,13 +59,9 @@ export default function Projects() {
                                     ))}
                                 </ul>
                             </div>
-                            <Link
-                                href={`/projects/${project.slug}`}
-                                className={styles.proj__cta}
-                                aria-label={`View ${project.title} project`}
-                            >
+                            <span className={styles.proj__cta}>
                                 <FiEye aria-hidden="true" /> View
-                            </Link>
+                            </span>
                         </li>
                     ))}
                 </ul>

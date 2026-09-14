@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { meta } from "./meta";
 import ProjectLayout from "@/components/ProjectLayout/ProjectLayout";
+import ExternalLink from "@/components/ExternalLink/ExternalLink";
 
 export const metadata: Metadata = {
     title: meta.title,
@@ -24,13 +25,9 @@ export default function Page() {
             </p>
             <p>
                 I had already built{" "}
-                <a
-                    href={meta.links[4].href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <ExternalLink href={meta.links[4].href}>
                     Transform Text
-                </a>{" "}
+                </ExternalLink>{" "}
                 — a single-page React application covering the transformations I
                 used most: formatting strings for file names, function names,
                 API payloads, and JSON bodies. The logic was written, tested,

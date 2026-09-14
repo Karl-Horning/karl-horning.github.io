@@ -9,12 +9,11 @@
     grid-template-columns: 3.5rem 1fr auto;
     gap: 2rem;
     padding: 2.25rem 0;
-    border-top: 1px solid var(--border);
     align-items: start;
 }
 
-.proj:last-child {
-    border-bottom: 1px solid var(--border);
+.proj + .proj {
+    border-top: 1px solid var(--border);
 }
 
 /* Decorative zero-padded index using the condensed display font */
@@ -34,6 +33,14 @@
     margin-bottom: 0.625rem;
 }
 
+.proj__title a {
+    transition: color 0.15s;
+}
+
+.proj__title a:hover {
+    color: var(--pink);
+}
+
 .proj__desc {
     font-size: 0.9375rem;
     color: var(--muted);
@@ -50,7 +57,6 @@
     list-style: none;
 }
 
-/* "View" link pinned to the top-right of each project row */
 .proj__cta {
     display: flex;
     align-items: center;
@@ -60,13 +66,8 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--pink-text);
+    color: var(--muted);
     padding-top: 0.35rem;
-    transition: color 0.15s;
-}
-
-.proj__cta:hover {
-    color: var(--pink);
 }
 
 /* Collapse to two columns on narrow viewports; CTA drops below the content */

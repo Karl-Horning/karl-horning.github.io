@@ -7,6 +7,7 @@ import Image from "next/image";
 import { MONTHS_FULL } from "@/lib/constants/dates";
 import { getPrevNext } from "@/lib/getPrevNext";
 import ContentLayout from "@/components/ContentLayout/ContentLayout";
+import ExternalLink from "@/components/ExternalLink/ExternalLink";
 
 interface Props {
     meta: PostMeta;
@@ -59,7 +60,7 @@ export default function BlogLayout({ meta, children }: Props) {
                         <Image
                             className={styles.author__photo}
                             src="/karl-profile-photo.png"
-                            alt="Karl Horning"
+                            alt=""
                             width={72}
                             height={72}
                         />
@@ -69,16 +70,14 @@ export default function BlogLayout({ meta, children }: Props) {
                             build fast, accessible things that work for
                             everyone.
                         </p>
-                        <a
+                        <ExternalLink
                             href={LINKEDIN_URL}
                             className={styles.author__link}
-                            target="_blank"
-                            rel="noopener noreferrer"
                             aria-label="Karl Horning on LinkedIn"
                         >
                             <FaLinkedin aria-hidden="true" />
                             Connect on LinkedIn
-                        </a>
+                        </ExternalLink>
                     </div>
 
                     <div className="card">
