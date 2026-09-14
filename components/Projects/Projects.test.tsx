@@ -33,20 +33,20 @@ describe("Projects", () => {
         }
     });
 
-    it("renders a 'View' link for each published project", () => {
-        render(<Projects />);
-        const viewLinks = screen.getAllByRole("link", { name: /view/i });
-        expect(viewLinks).toHaveLength(published.length);
-    });
-
-    it("links each project to its correct slug path", () => {
+    it("links each project title to its correct slug path", () => {
         render(<Projects />);
         for (const project of published) {
             expect(
-                screen.getByRole("link", {
-                    name: `View ${project.title} project`,
-                })
+                screen.getByRole("link", { name: project.title })
             ).toHaveAttribute("href", `/projects/${project.slug}`);
         }
+    });
+
+    it("renders 'View' as decorative text, not a link", () => {
+        render(<Projects />);
+        expect(
+            screen.queryByRole("link", { name: /view/i })
+        ).not.toBeInTheDocument();
+        expect(screen.getAllByText("View")).toHaveLength(published.length);
     });
 });
