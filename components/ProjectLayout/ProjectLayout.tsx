@@ -108,8 +108,8 @@ export default function ProjectLayout({ meta, children }: Props) {
                             aria-label="Project details"
                         >
                             {meta.stats && meta.stats.length > 0 && (
-                                <div className={styles.card}>
-                                    <p className={styles.card__title}>
+                                <div className="card">
+                                    <p className="card__title">
                                         At a glance
                                     </p>
                                     <ul className={styles.stats} role="list">
@@ -138,9 +138,9 @@ export default function ProjectLayout({ meta, children }: Props) {
                                 </div>
                             )}
 
-                            <div className={styles.card}>
-                                <p className={styles.card__title}>Tech stack</p>
-                                <ul className={styles.tech} role="list">
+                            <div className="card">
+                                <p className="card__title">Tech stack</p>
+                                <ul className="pill-list" role="list">
                                     {meta.keywords.map((kw) => (
                                         <li key={kw} className="tag">
                                             {kw}

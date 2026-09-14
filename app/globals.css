@@ -303,6 +303,29 @@
     }
 }
 
+/* ── Sidebar info card — used for at-a-glance stats, tech stack, and topics ── */
+.card {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+}
+
+.card__title {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--pink-text);
+    margin-bottom: 1.25rem;
+}
+
+/* ── Pill list — flex-wrap container for .tag pills ── */
+.pill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
 /* ── Tag — decorative pill used for tech stacks and topic lists ── */
 .tag {
     font-size: 0.6875rem;

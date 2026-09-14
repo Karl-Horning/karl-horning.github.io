@@ -39,6 +39,9 @@
 
 /* ── Author card ── */
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     position: sticky;
     top: 88px;
 }
@@ -99,16 +102,8 @@
 
 /* ── Post footer ── */
 .footer {
-    padding: 3rem 0 5rem;
+    padding: 3rem 0;
     border-top: 1px solid var(--border);
-}
-
-.footer__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    list-style: none;
-    margin-bottom: 3rem;
 }
 
 /* ── Responsive ── */

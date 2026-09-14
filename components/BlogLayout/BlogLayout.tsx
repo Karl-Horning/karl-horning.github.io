@@ -21,25 +21,17 @@ function formatDate(iso: string): string {
 /**
  * Shared layout for individual blog post pages.
  *
- * Renders the post header, rule, two-column body (article + author card), and footer with tags and prev/next navigation. Navigation and the topic eyebrow are derived from the post's metadata.
+ * Renders the post header, rule, two-column body (article + author/topics sidebar), and footer with prev/next navigation. Navigation is derived from the post's metadata.
  *
  * @return The blog post layout element.
  */
 export default function BlogLayout({ meta, children }: Props) {
-    const eyebrow = meta.topics
-        .slice(0, 2)
-        .map((t) => t.charAt(0).toUpperCase() + t.slice(1))
-        .join(" · ");
-
     const { prev, next } = getPrevNext(POSTS, meta.slug);
 
     return (
         <>
             <div className="page-header">
                 <div className="page-header__inner">
-                    <p className="eyebrow page-header__eyebrow">
-                        {eyebrow}
-                    </p>
                     <h1 className={`display ${styles.hero__title}`}>
                         {meta.title}
                     </h1>
@@ -72,7 +64,7 @@ export default function BlogLayout({ meta, children }: Props) {
 
                         <aside
                             className={styles.sidebar}
-                            aria-label="About the author"
+                            aria-label="Post details"
                         >
                             <div className={styles.author}>
                                 <p className={styles.author__eyebrow}>
@@ -105,6 +97,21 @@ export default function BlogLayout({ meta, children }: Props) {
                                     <FiArrowUpRight aria-hidden="true" />
                                 </a>
                             </div>
+
+                            <div className="card">
+                                <p className="card__title">Topics</p>
+                                <ul
+                                    className="pill-list"
+                                    role="list"
+                                    aria-label="Topics"
+                                >
+                                    {meta.topics.map((topic) => (
+                                        <li key={topic} className="tag">
+                                            {topic}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </aside>
                     </div>
                 </div>
@@ -112,14 +119,6 @@ export default function BlogLayout({ meta, children }: Props) {
 
             <div className={styles.footer}>
                 <div className="wrap">
-                    <ul className={styles.footer__tags} aria-label="Topics">
-                        {meta.topics.map((topic) => (
-                            <li key={topic} className="tag">
-                                {topic}
-                            </li>
-                        ))}
-                    </ul>
-
                     <PrevNextNav
                         prev={prev}
                         next={next}

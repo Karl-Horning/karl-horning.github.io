@@ -144,20 +144,6 @@
     top: 88px;
 }
 
-.card {
-    padding: 1.5rem;
-    border: 1px solid var(--border);
-}
-
-.card__title {
-    font-size: 0.6875rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--pink-text);
-    margin-bottom: 1.25rem;
-}
-
 .stats {
     list-style: none;
     display: flex;
@@ -182,13 +168,6 @@
 .stat__label {
     font-size: 0.8125rem;
     color: var(--muted);
-}
-
-.tech {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
 }
 
 /* ── Prev/next nav ── */
