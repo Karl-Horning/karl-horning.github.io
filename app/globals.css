@@ -246,7 +246,6 @@
 
 .prose ul,
 .prose ol {
-    list-style: disc;
     padding-left: 1.5rem;
     margin-bottom: 1.75rem;
     display: flex;
@@ -254,9 +253,44 @@
     gap: 0.625rem;
 }
 
+.prose ul {
+    list-style: none;
+}
+
+.prose ol {
+    list-style: decimal;
+}
+
+.prose ol li::marker {
+    color: var(--pink-text);
+    font-weight: 700;
+}
+
 .prose li {
     color: var(--muted);
     line-height: 1.7;
+}
+
+.prose ul li {
+    position: relative;
+}
+
+.prose ul li::before {
+    content: "";
+    position: absolute;
+    left: -1.25rem;
+    top: 0.65em;
+    width: 0.7em;
+    height: 0.7em;
+    background-color: var(--pink-text);
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'/%3E%3C/svg%3E");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'/%3E%3C/svg%3E");
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
 }
 
 .prose blockquote {
