@@ -1,0 +1,37 @@
+/* ── Body ── */
+.body {
+    padding: 4rem 0 5rem;
+}
+
+.body__grid {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 4.5rem;
+    align-items: start;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: sticky;
+    top: 88px;
+}
+
+/* ── Footer / prev-next nav wrapper ── */
+.footer {
+    padding: 3rem 0;
+    border-top: 1px solid var(--border);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .body__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+}

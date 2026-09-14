@@ -303,6 +303,27 @@
     }
 }
 
+/* ── Hero meta row — icon + text items under a page title, for example a date or reading time ── */
+.hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero__meta_item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.hero__meta_item svg {
+    color: var(--pink-text);
+}
+
 /* ── Sidebar info card — used for at-a-glance stats, tech stack, and topics ── */
 .card {
     padding: 1.5rem;

@@ -4,38 +4,6 @@
     margin-bottom: 1.5rem;
 }
 
-.hero__meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1rem;
-}
-
-.hero__meta_item {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--muted);
-}
-
-.hero__meta_item svg {
-    color: var(--pink-text);
-}
-
-/* ── Body ── */
-.body {
-    padding: 3.5rem 0 5rem;
-}
-
-.body__grid {
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 5rem;
-    align-items: start;
-}
-
 /* ── Prose — element selectors so page authors write plain HTML ── */
 .prose {
     font-size: 1.0625rem;
@@ -135,15 +103,7 @@
     color: var(--pink);
 }
 
-/* ── Sidebar ── */
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    position: sticky;
-    top: 88px;
-}
-
+/* ── Stats card ── */
 .stats {
     list-style: none;
     display: flex;
@@ -170,22 +130,8 @@
     color: var(--muted);
 }
 
-/* ── Prev/next nav ── */
-.nav {
-    padding: 3rem 0;
-    border-top: 1px solid var(--border);
-}
-
 /* ── Responsive ── */
 @media (max-width: 900px) {
-    .body__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar {
-        position: static;
-    }
-
     .stats {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -198,4 +144,3 @@
         flex-direction: column;
     }
 }
-
