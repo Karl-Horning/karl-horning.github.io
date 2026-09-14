@@ -94,13 +94,19 @@
 }
 
 .link__anchor {
-    color: var(--pink-text);
+    color: inherit;
     text-decoration: underline;
+    text-decoration-color: var(--pink-text);
+    text-decoration-thickness: 1.5px;
     text-underline-offset: 0.2em;
+    transition:
+        text-decoration-color 0.15s,
+        text-decoration-thickness 0.15s;
 }
 
 .link__anchor:hover {
-    color: var(--pink);
+    text-decoration-color: var(--pink);
+    text-decoration-thickness: 2px;
 }
 
 /* ── Stats card ── */
