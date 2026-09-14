@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FiGlobe, FiMapPin } from "react-icons/fi";
 import styles from "@/components/About/About.module.css";
 
 /**
@@ -49,9 +50,18 @@ export default function About() {
                             GraphQL API for a platform serving 700,000+ learners
                             across 180 countries.
                         </p>
-                        <p className={styles.about__location}>
-                            Based in London &middot; Open to remote/hybrid
-                        </p>
+                        <div
+                            className={`hero__meta ${styles.about__location}`}
+                        >
+                            <span className="hero__meta_item">
+                                <FiMapPin aria-hidden="true" />
+                                London
+                            </span>
+                            <span className="hero__meta_item">
+                                <FiGlobe aria-hidden="true" />
+                                Open to remote/hybrid
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
