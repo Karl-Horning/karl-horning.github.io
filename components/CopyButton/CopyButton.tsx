@@ -12,11 +12,11 @@ interface CopyButtonProps {
 /**
  * Copy-to-clipboard button used inside {@link CodeBlock}.
  *
- * Writes `text` to the system clipboard and shows a brief "Copied!" confirmation before resetting. Extracted as a separate client component so that `CodeBlock` itself can remain a server component.
+ * Writes `text` to the system clipboard and shows a brief "Copied!" confirmation before resetting. Extracted as a separate client component so that `CodeBlock` itself can remain a server component. The confirmation is also announced to screen readers via a status region.
  *
  * @param props - Component props.
  * @param props.text - The string to copy.
- * @returns A button element positioned absolutely by its parent.
+ * @returns The button and its status region.
  */
 export default function CopyButton({ text }: CopyButtonProps) {
     const [copied, setCopied] = useState(false);
@@ -29,13 +29,18 @@ export default function CopyButton({ text }: CopyButtonProps) {
     };
 
     return (
-        <button
-            type="button"
-            onClick={handleCopy}
-            aria-label="Copy code to clipboard"
-            className={styles.button}
-        >
-            {copied ? "Copied!" : "Copy"}
-        </button>
+        <>
+            <button
+                type="button"
+                onClick={handleCopy}
+                aria-label="Copy code to clipboard"
+                className={styles.button}
+            >
+                {copied ? "Copied!" : "Copy"}
+            </button>
+            <span className="sr-only" role="status">
+                {copied ? "Copied to clipboard" : ""}
+            </span>
+        </>
     );
 }

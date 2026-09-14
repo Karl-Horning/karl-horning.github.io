@@ -1,7 +1,11 @@
+"use client";
+
 import styles from "@/components/Footer/Footer.module.css";
 import { CODEPEN_URL, GITHUB_URL, LINKEDIN_URL, RSS_FEED_URL } from "@/lib/constants/links";
 import { NAV_LINKS } from "@/lib/constants/nav";
+import { isCurrentNavLink } from "@/lib/isCurrentNavLink";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FaCodepen, FaGithub, FaLinkedin, FaRss } from "react-icons/fa";
 import ExternalLink from "@/components/ExternalLink/ExternalLink";
 
@@ -13,6 +17,8 @@ import ExternalLink from "@/components/ExternalLink/ExternalLink";
  * @return The footer element.
  */
 export default function Footer() {
+    const pathname = usePathname();
+
     return (
         <footer className={styles.footer} aria-label="Site footer">
             <div className="wrap">
@@ -26,7 +32,16 @@ export default function Footer() {
                         <ul className={styles.footer__nav} role="list">
                             {NAV_LINKS.map(({ href, label }) => (
                                 <li key={href}>
-                                    <Link href={href}>{label}</Link>
+                                    <Link
+                                        href={href}
+                                        aria-current={
+                                            isCurrentNavLink(pathname, href)
+                                                ? "page"
+                                                : undefined
+                                        }
+                                    >
+                                        {label}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

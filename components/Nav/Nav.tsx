@@ -7,6 +7,7 @@ import Link from "next/link";
 import Logo from "@/components/Logo/Logo";
 import styles from "@/components/Nav/Nav.module.css";
 import { NAV_LINKS } from "@/lib/constants/nav";
+import { isCurrentNavLink } from "@/lib/isCurrentNavLink";
 
 /**
  * Site-wide navigation bar with a responsive mobile menu.
@@ -99,6 +100,46 @@ export default function Nav() {
         return () => document.removeEventListener("pointerdown", onPointerDown);
     }, [isOpen]);
 
+    // Only true once the drawer has been opened, so this doesn't steal focus to the hamburger button on initial mount.
+    const wasOpenRef = useRef(false);
+
+    useEffect(() => {
+        if (isOpen) {
+            wasOpenRef.current = true;
+            drawerRef.current?.querySelector<HTMLElement>("a")?.focus();
+        } else if (wasOpenRef.current) {
+            wasOpenRef.current = false;
+            hamburgerRef.current?.focus();
+        }
+    }, [isOpen]);
+
+    useEffect(() => {
+        if (!isOpen) return;
+        function onKeyDown(e: KeyboardEvent) {
+            if (e.key === "Escape") {
+                setIsOpen(false);
+                return;
+            }
+            if (e.key !== "Tab" || !drawerRef.current) return;
+
+            const links =
+                drawerRef.current.querySelectorAll<HTMLElement>("a[href]");
+            if (links.length === 0) return;
+            const first = links[0];
+            const last = links[links.length - 1];
+
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        }
+        document.addEventListener("keydown", onKeyDown);
+        return () => document.removeEventListener("keydown", onKeyDown);
+    }, [isOpen]);
+
     function toggleMobileMenu() {
         setIsOpen((prev) => !prev);
     }
@@ -114,9 +155,17 @@ export default function Nav() {
             className={`${styles.mobileMenu} ${isOpen ? styles.mobileMenuOpen : ""}`}
             role="navigation"
             aria-label="Mobile navigation"
+            inert={!isOpen}
         >
             {NAV_LINKS.map(({ href, label }) => (
-                <Link key={href} href={href} onClick={closeMobileMenu}>
+                <Link
+                    key={href}
+                    href={href}
+                    onClick={closeMobileMenu}
+                    aria-current={
+                        isCurrentNavLink(pathname, href) ? "page" : undefined
+                    }
+                >
                     {label}
                 </Link>
             ))}
@@ -141,7 +190,16 @@ export default function Nav() {
                     <ul className={styles.navLinks} role="list">
                         {NAV_LINKS.map(({ href, label }) => (
                             <li key={href}>
-                                <Link href={href}>{label}</Link>
+                                <Link
+                                    href={href}
+                                    aria-current={
+                                        isCurrentNavLink(pathname, href)
+                                            ? "page"
+                                            : undefined
+                                    }
+                                >
+                                    {label}
+                                </Link>
                             </li>
                         ))}
                     </ul>

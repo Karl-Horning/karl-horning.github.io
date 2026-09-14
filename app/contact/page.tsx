@@ -78,14 +78,13 @@ export default function Page() {
                                 action={FORMSPREE_URL}
                                 method="POST"
                                 aria-label="Contact form"
-                                noValidate
                             >
                                 <div className={styles.field}>
                                     <label
                                         className={styles.field__label}
                                         htmlFor="name"
                                     >
-                                        Your name
+                                        Your name (required)
                                     </label>
                                     <input
                                         className={styles.field__input}
@@ -102,7 +101,7 @@ export default function Page() {
                                         className={styles.field__label}
                                         htmlFor="email"
                                     >
-                                        Email address
+                                        Email address (required)
                                     </label>
                                     <input
                                         className={styles.field__input}
@@ -119,7 +118,7 @@ export default function Page() {
                                         className={styles.field__label}
                                         htmlFor="message"
                                     >
-                                        Message
+                                        Message (required)
                                     </label>
                                     <textarea
                                         className={styles.field__textarea}
