@@ -6,6 +6,7 @@ import type { IconType } from "react-icons";
 import { MONTHS_SHORT } from "@/lib/constants/dates";
 import { getPrevNext } from "@/lib/getPrevNext";
 import ContentLayout from "@/components/ContentLayout/ContentLayout";
+import ExternalLink from "@/components/ExternalLink/ExternalLink";
 
 /** Maps a project link's icon field to the icon it renders. */
 const LINK_ICONS: Record<LinkIcon, IconType> = {
@@ -83,16 +84,14 @@ export default function ProjectLayout({ meta, children }: Props) {
                                                 <LinkIconComponent aria-hidden="true" />
                                             </span>
                                             <p className={styles.link__text}>
-                                                <a
+                                                <ExternalLink
                                                     href={link.href}
                                                     className={
                                                         styles.link__anchor
                                                     }
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
                                                 >
                                                     {link.label}
-                                                </a>
+                                                </ExternalLink>
                                             </p>
                                         </li>
                                     );

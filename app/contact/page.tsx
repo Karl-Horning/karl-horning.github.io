@@ -3,6 +3,7 @@ import { FORMSPREE_URL, LINKEDIN_URL } from "@/lib/constants/links";
 import { Metadata } from "next";
 import { FaLinkedin } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
+import ExternalLink from "@/components/ExternalLink/ExternalLink";
 
 export const metadata: Metadata = {
     title: "Contact",
@@ -57,15 +58,13 @@ export default function Page() {
                                     responsive within a day or two.
                                 </p>
                                 <div className={styles.linkedin_card__action}>
-                                    <a
+                                    <ExternalLink
                                         href={LINKEDIN_URL}
                                         className={`btn ${styles.btn_linkedin}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
                                     >
                                         <FaLinkedin aria-hidden="true" />
                                         Connect on LinkedIn
-                                    </a>
+                                    </ExternalLink>
                                 </div>
                             </div>
                         </div>

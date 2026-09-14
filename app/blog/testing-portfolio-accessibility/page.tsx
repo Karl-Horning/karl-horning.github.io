@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { meta } from "./meta";
 import BlogLayout from "@/components/BlogLayout/BlogLayout";
+import ExternalLink from "@/components/ExternalLink/ExternalLink";
 
 export const metadata: Metadata = {
     title: meta.title,
@@ -21,34 +22,22 @@ export default function Page() {
                 deliberate about how I build UIs. While doing that, I kept
                 noticing how often accessibility is treated as something to bolt
                 on at the end, if at all —{" "}
-                <a
-                    href="https://webaim.org/projects/million/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <ExternalLink href="https://webaim.org/projects/million/">
                     WebAIM&apos;s 2025 analysis of one million homepages
-                </a>{" "}
+                </ExternalLink>{" "}
                 found that 94.8% had at least one detectable accessibility
                 failure. I didn&apos;t want to build that habit into my own
                 site, so I decided to take it seriously from the start.
             </p>
             <p>
                 That meant more than running Lighthouse. I added{" "}
-                <a
-                    href="https://playwright.dev/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <ExternalLink href="https://playwright.dev/">
                     Playwright
-                </a>{" "}
+                </ExternalLink>{" "}
                 and{" "}
-                <a
-                    href="https://www.deque.com/axe/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <ExternalLink href="https://www.deque.com/axe/">
                     axe-core
-                </a>{" "}
+                </ExternalLink>{" "}
                 to run automated accessibility checks against every route on
                 every build. I also test with keyboard navigation — not just as
                 a QA step, but as part of how I use my own site. And I started

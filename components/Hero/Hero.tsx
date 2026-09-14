@@ -3,6 +3,7 @@ import styles from "@/components/Hero/Hero.module.css";
 import { LINKEDIN_URL } from "@/lib/constants/links";
 import { FiGrid } from "react-icons/fi";
 import { FaLinkedin } from "react-icons/fa";
+import ExternalLink from "@/components/ExternalLink/ExternalLink";
 
 /**
  * Full-page hero section introducing the site owner.
@@ -42,14 +43,12 @@ export default function Hero() {
                             <Link href="/#projects" className="btn btn--solid">
                                 <FiGrid aria-hidden="true" /> View my work
                             </Link>
-                            <a
+                            <ExternalLink
                                 href={LINKEDIN_URL}
                                 className="btn btn--ghost"
-                                target="_blank"
-                                rel="noopener noreferrer"
                             >
                                 <FaLinkedin aria-hidden="true" /> LinkedIn
-                            </a>
+                            </ExternalLink>
                         </div>
                     </div>
                 </div>

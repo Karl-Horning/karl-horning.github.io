@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { LINKEDIN_URL } from "@/lib/constants/links";
+import ExternalLink from "@/components/ExternalLink/ExternalLink";
 
 export const metadata: Metadata = {
     title: "Accessibility Statement",
@@ -66,10 +67,6 @@ export default function Page() {
                         <h2>Known limitations</h2>
                         <ul>
                             <li>
-                                Links that open in a new tab don&apos;t
-                                currently announce that to screen readers.
-                            </li>
-                            <li>
                                 The contact form is processed by Formspree,
                                 a third-party service whose interface
                                 isn&apos;t under my control.
@@ -86,16 +83,12 @@ export default function Page() {
                                 <Link href="/contact">Contact form</Link>
                             </li>
                             <li>
-                                <a
-                                    href={LINKEDIN_URL}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
+                                <ExternalLink href={LINKEDIN_URL}>
                                     LinkedIn
-                                </a>
+                                </ExternalLink>
                             </li>
                         </ul>
-                        <p>Last reviewed: 13 September 2026.</p>
+                        <p>Last reviewed: 14 September 2026.</p>
                     </div>
                 </div>
             </section>

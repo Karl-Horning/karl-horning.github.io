@@ -69,7 +69,7 @@ export default function BlogList({ posts }: BlogListProps) {
     return (
         <section className={styles.section} aria-labelledby="posts-heading">
             <div className="wrap">
-                <h2 className={styles.sr_only} id="posts-heading">
+                <h2 className="sr-only" id="posts-heading">
                     All posts
                 </h2>
 
