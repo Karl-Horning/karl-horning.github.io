@@ -39,6 +39,8 @@ export default function Nav() {
         function onScroll() {
             setScrolledFromTop(window.scrollY > 0);
         }
+        // The page can load already scrolled (for example on refresh), so read the current position immediately rather than waiting for the next scroll event.
+        onScroll();
         window.addEventListener("scroll", onScroll, { passive: true });
         return () => window.removeEventListener("scroll", onScroll);
     }, [isHomepage]);
