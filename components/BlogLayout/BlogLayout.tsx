@@ -59,7 +59,7 @@ export default function BlogLayout({ meta, children }: Props) {
                         <Image
                             className={styles.author__photo}
                             src="/karl-profile-photo.png"
-                            alt="Karl Horning"
+                            alt=""
                             width={72}
                             height={72}
                         />
