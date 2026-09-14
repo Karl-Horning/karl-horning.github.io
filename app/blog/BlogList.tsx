@@ -104,14 +104,10 @@ export default function BlogList({ posts }: BlogListProps) {
                                 </ul>
                             </div>
 
-                            <Link
-                                href={`/blog/${post.slug}`}
-                                className={styles.post__read}
-                                aria-label={`Read: ${post.title} — ${post.readingTime} min`}
-                            >
+                            <span className={styles.post__read}>
                                 <FiBookOpen aria-hidden="true" />{" "}
                                 {post.readingTime} min
-                            </Link>
+                            </span>
                         </li>
                     ))}
                 </ul>
