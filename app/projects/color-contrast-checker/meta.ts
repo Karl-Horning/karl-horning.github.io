@@ -1,4 +1,5 @@
 import { CCC_DEMO_URL, CCC_REPO_URL } from "@/lib/constants/links";
+import type { ProjectMeta } from "@/lib/projects";
 
 export const meta = {
     title: "Color Contrast Checker",
@@ -19,7 +20,15 @@ export const meta = {
     ],
     linksTitle: "Repo on GitHub and Live Demo",
     links: [
-        { label: "Color Contrast Checker repo", href: CCC_REPO_URL },
-        { label: "Color Contrast Checker demo", href: CCC_DEMO_URL },
+        {
+            label: "Color Contrast Checker repo",
+            href: CCC_REPO_URL,
+            icon: "github",
+        },
+        {
+            label: "Color Contrast Checker demo",
+            href: CCC_DEMO_URL,
+            icon: "web",
+        },
     ],
-};
+} satisfies ProjectMeta;

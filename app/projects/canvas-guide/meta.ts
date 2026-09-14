@@ -1,4 +1,5 @@
 import { CANVAS_GUIDE_REPO_URL, CANVAS_GUIDE_URL } from "@/lib/constants/links";
+import type { ProjectMeta } from "@/lib/projects";
 
 export const meta = {
     title: "Canvas Content Styling Guide",
@@ -26,7 +27,11 @@ export const meta = {
     ],
     linksTitle: "Documentation site and source code",
     links: [
-        { label: "canvas.karlhorning.dev", href: CANVAS_GUIDE_URL },
-        { label: "GitHub repository", href: CANVAS_GUIDE_REPO_URL },
+        { label: "canvas.karlhorning.dev", href: CANVAS_GUIDE_URL, icon: "web" },
+        {
+            label: "GitHub repository",
+            href: CANVAS_GUIDE_REPO_URL,
+            icon: "github",
+        },
     ],
-};
+} satisfies ProjectMeta;

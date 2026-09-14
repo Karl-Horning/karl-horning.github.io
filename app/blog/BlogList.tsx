@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import type { PostMeta } from "@/lib/posts";
 import styles from "./BlogList.module.css";
-import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import { FiArrowLeft, FiArrowRight, FiBookOpen } from "react-icons/fi";
 import { MONTHS_FULL, MONTHS_SHORT } from "@/lib/constants/dates";
 
 /** Number of posts shown per page. */
@@ -109,8 +109,8 @@ export default function BlogList({ posts }: BlogListProps) {
                                 className={styles.post__read}
                                 aria-label={`Read: ${post.title} — ${post.readingTime} min`}
                             >
-                                {post.readingTime} min{" "}
-                                <FiArrowRight aria-hidden="true" />
+                                <FiBookOpen aria-hidden="true" />{" "}
+                                {post.readingTime} min
                             </Link>
                         </li>
                     ))}

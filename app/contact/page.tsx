@@ -2,7 +2,7 @@ import styles from "@/app/contact/page.module.css";
 import { FORMSPREE_URL, LINKEDIN_URL } from "@/lib/constants/links";
 import { Metadata } from "next";
 import { FaLinkedin } from "react-icons/fa";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiSend } from "react-icons/fi";
 
 export const metadata: Metadata = {
     title: "Contact",
@@ -64,10 +64,7 @@ export default function Page() {
                                         rel="noopener noreferrer"
                                     >
                                         <FaLinkedin aria-hidden="true" />
-                                        Connect on LinkedIn{" "}
-                                        <span className={styles.btn_linkedin__arrow}>
-                                            <FiArrowUpRight aria-hidden="true" />
-                                        </span>
+                                        Connect on LinkedIn
                                     </a>
                                 </div>
                             </div>
@@ -141,7 +138,7 @@ export default function Page() {
                                     type="submit"
                                     className={`btn btn--solid ${styles.form__submit}`}
                                 >
-                                    Send message
+                                    <FiSend aria-hidden="true" /> Send message
                                 </button>
                             </form>
                         </div>

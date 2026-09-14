@@ -4,6 +4,9 @@ import { meta as karlhorningDev } from "@/app/projects/karlhorning-dev/meta";
 import { meta as learnlightPlatform } from "@/app/projects/learnlight-platform/meta";
 import { meta as transformText } from "@/app/projects/transform-text/meta";
 
+/** Identifies which icon a project link should render, based on where it points. */
+export type LinkIcon = "github" | "chrome" | "edge" | "firefox" | "web";
+
 /** Metadata for a single project. */
 export interface ProjectMeta {
     title: string;
@@ -17,7 +20,7 @@ export interface ProjectMeta {
     slug: string;
     draft: boolean;
     stats?: Array<{ value: string; label: string }>;
-    links?: Array<{ label: string; href: string }>;
+    links?: Array<{ label: string; href: string; icon?: LinkIcon }>;
     linksTitle?: string;
 }
 

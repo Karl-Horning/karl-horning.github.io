@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FiArrowLeft } from "react-icons/fi";
+import { FiBookOpen, FiHome } from "react-icons/fi";
 import styles from "@/app/not-found.module.css";
 
 export const metadata: Metadata = {
@@ -43,10 +43,10 @@ export default function NotFound() {
                     </div>
                     <div className={styles.error__actions}>
                         <Link href="/" className="btn btn--solid">
-                            <FiArrowLeft aria-hidden="true" /> Go home
+                            <FiHome aria-hidden="true" /> Go home
                         </Link>
                         <Link href="/blog" className="btn btn--ghost">
-                            Read the blog
+                            <FiBookOpen aria-hidden="true" /> Read the blog
                         </Link>
                     </div>
                 </div>

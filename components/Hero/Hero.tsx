@@ -1,7 +1,8 @@
 import Link from "next/link";
 import styles from "@/components/Hero/Hero.module.css";
 import { LINKEDIN_URL } from "@/lib/constants/links";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiGrid } from "react-icons/fi";
+import { FaLinkedin } from "react-icons/fa";
 
 /**
  * Full-page hero section introducing the site owner.
@@ -39,7 +40,7 @@ export default function Hero() {
                         </div>
                         <div className={styles.hero__actions}>
                             <Link href="/#projects" className="btn btn--solid">
-                                View my work
+                                <FiGrid aria-hidden="true" /> View my work
                             </Link>
                             <a
                                 href={LINKEDIN_URL}
@@ -47,7 +48,7 @@ export default function Hero() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                LinkedIn <FiArrowUpRight aria-hidden="true" />
+                                <FaLinkedin aria-hidden="true" /> LinkedIn
                             </a>
                         </div>
                     </div>

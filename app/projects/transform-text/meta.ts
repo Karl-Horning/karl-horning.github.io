@@ -5,6 +5,7 @@ import {
     TRANSFORM_TEXT_REPO_URL,
     TRANSFORM_TEXT_URL,
 } from "@/lib/constants/links";
+import type { ProjectMeta } from "@/lib/projects";
 
 export const meta = {
     title: "Transform Text Extension",
@@ -37,10 +38,18 @@ export const meta = {
     ],
     linksTitle: "Store listings and source code",
     links: [
-        { label: "Chrome Web Store", href: CHROME_STORE_URL },
-        { label: "Microsoft Edge Add-ons", href: EDGE_STORE_URL },
-        { label: "Firefox Add-ons", href: FIREFOX_STORE_URL },
-        { label: "GitHub Repository", href: TRANSFORM_TEXT_REPO_URL },
-        { label: "Companion Web App", href: TRANSFORM_TEXT_URL },
+        { label: "Chrome Web Store", href: CHROME_STORE_URL, icon: "chrome" },
+        { label: "Microsoft Edge Add-ons", href: EDGE_STORE_URL, icon: "edge" },
+        {
+            label: "Firefox Add-ons",
+            href: FIREFOX_STORE_URL,
+            icon: "firefox",
+        },
+        {
+            label: "GitHub Repository",
+            href: TRANSFORM_TEXT_REPO_URL,
+            icon: "github",
+        },
+        { label: "Companion Web App", href: TRANSFORM_TEXT_URL, icon: "web" },
     ],
-};
+} satisfies ProjectMeta;

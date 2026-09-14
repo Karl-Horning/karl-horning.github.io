@@ -1,9 +1,20 @@
 import styles from "@/components/ProjectLayout/ProjectLayout.module.css";
-import { PROJECTS, type ProjectMeta } from "@/lib/projects";
-import { FiArrowUpRight, FiBriefcase, FiCalendar } from "react-icons/fi";
+import { PROJECTS, type LinkIcon, type ProjectMeta } from "@/lib/projects";
+import { FiBriefcase, FiCalendar, FiExternalLink } from "react-icons/fi";
+import { FaChrome, FaEdge, FaFirefox, FaGithub, FaGlobe } from "react-icons/fa";
+import type { IconType } from "react-icons";
 import { MONTHS_SHORT } from "@/lib/constants/dates";
 import { getPrevNext } from "@/lib/getPrevNext";
 import ContentLayout from "@/components/ContentLayout/ContentLayout";
+
+/** Maps a project link's icon field to the icon it renders. */
+const LINK_ICONS: Record<LinkIcon, IconType> = {
+    github: FaGithub,
+    chrome: FaChrome,
+    edge: FaEdge,
+    firefox: FaFirefox,
+    web: FaGlobe,
+};
 
 interface Props {
     meta: ProjectMeta;
@@ -54,31 +65,38 @@ export default function ProjectLayout({ meta, children }: Props) {
                                 {meta.linksTitle ?? "Links"}
                             </p>
                             <ul className={styles.links__list} role="list">
-                                {meta.links.map((link) => (
-                                    <li
-                                        key={link.label}
-                                        className={styles.link}
-                                    >
-                                        <span
-                                            className={styles.link__icon}
-                                            aria-hidden="true"
+                                {meta.links.map((link) => {
+                                    const LinkIconComponent = link.icon
+                                        ? LINK_ICONS[link.icon]
+                                        : FiExternalLink;
+                                    return (
+                                        <li
+                                            key={link.label}
+                                            className={styles.link}
                                         >
-                                            <FiArrowUpRight aria-hidden="true" />
-                                        </span>
-                                        <p className={styles.link__text}>
-                                            <a
-                                                href={link.href}
+                                            <span
                                                 className={
-                                                    styles.link__anchor
+                                                    styles.link__icon
                                                 }
-                                                target="_blank"
-                                                rel="noopener noreferrer"
+                                                aria-hidden="true"
                                             >
-                                                {link.label}
-                                            </a>
-                                        </p>
-                                    </li>
-                                ))}
+                                                <LinkIconComponent aria-hidden="true" />
+                                            </span>
+                                            <p className={styles.link__text}>
+                                                <a
+                                                    href={link.href}
+                                                    className={
+                                                        styles.link__anchor
+                                                    }
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    {link.label}
+                                                </a>
+                                            </p>
+                                        </li>
+                                    );
+                                })}
                             </ul>
                         </div>
                     )}

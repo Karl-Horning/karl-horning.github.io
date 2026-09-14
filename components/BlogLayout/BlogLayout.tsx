@@ -2,7 +2,7 @@ import styles from "@/components/BlogLayout/BlogLayout.module.css";
 import { POSTS, type PostMeta } from "@/lib/posts";
 import { LINKEDIN_URL } from "@/lib/constants/links";
 import { FaLinkedin } from "react-icons/fa";
-import { FiArrowUpRight, FiCalendar, FiClock } from "react-icons/fi";
+import { FiCalendar, FiClock } from "react-icons/fi";
 import Image from "next/image";
 import { MONTHS_FULL } from "@/lib/constants/dates";
 import { getPrevNext } from "@/lib/getPrevNext";
@@ -78,7 +78,6 @@ export default function BlogLayout({ meta, children }: Props) {
                         >
                             <FaLinkedin aria-hidden="true" />
                             Connect on LinkedIn
-                            <FiArrowUpRight aria-hidden="true" />
                         </a>
                     </div>
 
