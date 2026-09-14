@@ -53,10 +53,9 @@ export default function Page() {
                     <div className={styles.block}>
                         <h2 className="section__title">Colours</h2>
                         <p className={styles.label}>
-                            Swatches render using the site&apos;s live
-                            colour variables, so they show whichever mode —
-                            light or dark — is currently active. Both
-                            values are listed underneath.
+                            Each swatch reflects the site&apos;s current
+                            colour scheme, light or dark. Both values are
+                            listed underneath.
                         </p>
                         <br />
                         <div className={styles.swatches}>
@@ -128,11 +127,6 @@ export default function Page() {
                             <p className={styles.label}>
                                 .prose a — shared globally, used in blog
                                 posts and the accessibility statement.
-                                Project pages use their own separate .prose
-                                module class instead — it only needs to
-                                style paragraphs, links, and figures, so
-                                it stays simpler (see the note under
-                                Bullets).
                             </p>
                             <div className="prose" style={{ marginBottom: 0 }}>
                                 <p style={{ marginBottom: 0 }}>
@@ -156,8 +150,8 @@ export default function Page() {
                                 className={styles.label}
                                 style={{ color: "rgba(255,255,255,0.5)" }}
                             >
-                                Footer link (.footer__legal_link — always
-                                dark background regardless of site theme)
+                                Footer link (.footer__legal_link — dark
+                                background)
                             </p>
                             <a
                                 href="#"
@@ -187,8 +181,7 @@ export default function Page() {
                             .btn.btn--solid, .btn.btn--ghost. A third
                             variant, LinkedIn-branded (<code>btn_linkedin</code>
                             {" "}in <code>contact/page.module.css</code>),
-                            overrides the fill with LinkedIn&apos;s brand
-                            blue rather than the site palette.
+                            uses LinkedIn&apos;s brand blue.
                         </p>
                     </div>
 
@@ -201,27 +194,18 @@ export default function Page() {
                             <li className="tag">TypeScript</li>
                         </ul>
                         <p className={styles.label}>
-                            .tag — a shared global class (used to be four
-                            separately-defined copies across Projects,
-                            BlogList, ProjectLayout, and BlogLayout).
-                            Decorative only; not interactive.
+                            .tag — a shared global class. Decorative only,
+                            not interactive.
                         </p>
                     </div>
 
                     <div className={styles.block}>
                         <h2 className="section__title">Bullets</h2>
                         <p className={styles.label}>
-                            .prose ul, .prose ol — shared globally, and sets
-                            list-style: disc explicitly, since
-                            Tailwind&apos;s reset hides bullets by default.
-                            Used to be two separate copies (.article in
-                            BlogLayout, .content on this page) that each had
-                            to remember that fix independently — now
-                            there&apos;s one definition to get right.
-                            Project pages keep their own separate .prose
-                            module class, which only styles paragraphs,
-                            links, and figures — it has never needed a ul
-                            rule at all.
+                            .prose ul, .prose ol — shared globally.
+                            Unordered lists use a chevron icon marker,
+                            matching the cmalt portfolio; ordered lists
+                            keep numbers, coloured to match.
                         </p>
                         <div className="prose" style={{ marginBottom: 0 }}>
                             <ul style={{ marginBottom: 0 }}>
@@ -229,6 +213,11 @@ export default function Page() {
                                 <li>Second item</li>
                                 <li>Third item</li>
                             </ul>
+                            <ol style={{ marginTop: "1rem", marginBottom: 0 }}>
+                                <li>First step</li>
+                                <li>Second step</li>
+                                <li>Third step</li>
+                            </ol>
                         </div>
                     </div>
 
