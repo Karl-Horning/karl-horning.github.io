@@ -1,4 +1,5 @@
 import { KARLHORNING_DEV_REPO_URL } from "@/lib/constants/links";
+import type { ProjectMeta } from "@/lib/projects";
 
 export const meta = {
     title: "karlhorning.dev",
@@ -26,5 +27,11 @@ export const meta = {
         { value: "100", label: "Lighthouse performance" },
     ],
     linksTitle: "Source code",
-    links: [{ label: "GitHub repository", href: KARLHORNING_DEV_REPO_URL }],
-};
+    links: [
+        {
+            label: "GitHub repository",
+            href: KARLHORNING_DEV_REPO_URL,
+            icon: "github",
+        },
+    ],
+} satisfies ProjectMeta;

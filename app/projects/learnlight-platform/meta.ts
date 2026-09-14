@@ -3,6 +3,7 @@ import {
     OLD_API_POC_URL,
     RATE_LIMIT_POC_URL,
 } from "@/lib/constants/links";
+import type { ProjectMeta } from "@/lib/projects";
 
 export const meta = {
     title: "Learnlight Platform",
@@ -34,8 +35,20 @@ export const meta = {
     ],
     linksTitle: "Proof of concepts on GitHub",
     links: [
-        { label: "Oxford Dictionaries API PoC", href: OLD_API_POC_URL },
-        { label: "GraphQL Rate Limit PoC", href: RATE_LIMIT_POC_URL },
-        { label: "GraphQL N+1 / DataLoader PoC", href: NPLUSONE_POC_URL },
+        {
+            label: "Oxford Dictionaries API PoC",
+            href: OLD_API_POC_URL,
+            icon: "github",
+        },
+        {
+            label: "GraphQL Rate Limit PoC",
+            href: RATE_LIMIT_POC_URL,
+            icon: "github",
+        },
+        {
+            label: "GraphQL N+1 / DataLoader PoC",
+            href: NPLUSONE_POC_URL,
+            icon: "github",
+        },
     ],
-};
+} satisfies ProjectMeta;

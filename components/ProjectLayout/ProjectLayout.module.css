@@ -73,6 +73,7 @@
     gap: 1rem;
     padding: 1.25rem 0;
     border-top: 1px solid var(--border);
+    align-items: center;
 }
 
 .link:last-child {
@@ -81,8 +82,7 @@
 
 .link__icon {
     display: flex;
-    align-items: flex-start;
-    padding-top: 0.2rem;
+    align-items: center;
     color: var(--pink-text);
     font-size: 0.875rem;
 }
