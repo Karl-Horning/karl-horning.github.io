@@ -1,8 +1,8 @@
-# karlhorning.dev
+# KarlHorning.dev
 
 Personal portfolio and blog — a statically exported Next.js site with Playwright + axe-core accessibility testing built in.
 
-**Live site:** [karlhorning.dev](https://www.karlhorning.dev)
+**Live site:** [KarlHorning.dev](https://www.karlhorning.dev)
 
 ## Stack
 
